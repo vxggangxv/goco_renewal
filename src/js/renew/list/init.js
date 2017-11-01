@@ -4,44 +4,44 @@ $(function () {
     activeInfo();
     
 	/*함수 정의*/
-    function activeInfo () {
-        
-        var $charts     = $( '#reserChart' );
-        
-        /*원형 차트 처리*/
-        $charts.each( function () {
-            
-            var $chart  = $( this ),
-                $circleTop= $chart.find( '.top .circle-inner')
-                                    .css( { transform: 'rotate(0)' } ),
-				
-                /*백분율 값 가져오기*/
-                $percentNumber  = $chart.find( '.percent-number' ),
-                percentData     = $percentNumber.text();
-            
-            /*백분율 값의 초기값 지정*/
-            $percentNumber.text( 0 );
-            
-            
-            /*각도 애니메이션*/
-            $( { percent: 0 } ).delay( 500 ).animate( {
-                percent: percentData
-            }, {
-                duration: 1500,
-                progress: function () {
-                    var now      = this.percent,
-                        deg      = now * 180 / 100,
-                        degBottom = Math.min( Math.max( deg, 0 ), 180 );
-                        
-                    $circleTop.css( {
-                        transform: 'rotate(' + degBottom + 'deg)'
-                    } );
+	function activeInfo () {
+
+		var $charts     = $( '#reserChart' );
+
+		/*원형 차트 처리*/
+		$charts.each( function () {
+
+			var $chart  = $( this ),
+			$circleTop= $chart.find( '.top .circle-inner')
+			.css( { transform: 'rotate(0)' } ),
+
+			/*백분율 값 가져오기*/
+			$percentNumber  = $chart.find( '.percent-number' ),
+			percentData     = $percentNumber.text();
+
+			/*백분율 값의 초기값 지정*/
+			$percentNumber.text( 0 );
+
+
+			/*각도 애니메이션*/
+			$( { percent: 0 } ).delay( 500 ).animate( {
+				percent: percentData
+			}, {
+				duration: 1500,
+				progress: function () {
+					var now      = this.percent,
+					deg      = now * 180 / 100,
+					degBottom = Math.min( Math.max( deg, 0 ), 180 );
+
+					$circleTop.css( {
+						transform: 'rotate(' + degBottom + 'deg)'
+					} );
 					
-                    $percentNumber.text( Math.floor( now ) );
-                }
-            } );
-        } );        
-    }
+					$percentNumber.text( Math.floor( now ) );
+				}
+			} );
+		} );        
+	}
 	
 	
 	// 카테고리 클릭 이벤트
@@ -109,30 +109,47 @@ $(function () {
 		values_separator: " ~ "
 	});
 	
+	// 배경 클릭 시
+	$('#backDrop').click(function() {
+		$('#rnL-ts .rnSltCal').hide();
+		$('#rnL-ts .rnSltReg').hide();
+		$(this).hide();
+	});
+	
 	// 달력 등장
 	$('#rnL-ts .d1 .i-gCal, #rnL-ts .d1 span[class*=Date]').click(function() {
 		$('#backDrop').show();
+		$('#rnL-ts .rnSltReg').hide();
 		$('#rnL-ts .rnSltCal').fadeIn();
-	});
-	$('#backDrop').click(function() {
-		$('#rnL-ts .rnSltCal').hide();
-		$(this).hide();
 	});
 	
 	// 지역선택 등장
 	$('#rnL-ts .d1 .i-gSpot, #rnL-ts .d1 span[class*=reg]').click(function() {
 		$('#backDrop').show();
+		$('#rnL-ts .rnSltCal').hide();
 		$('#rnL-ts .rnSltReg').fadeIn();
 	});
-	$('#backDrop').click(function() {
-		$('#rnL-ts .rnSltReg').hide();
-		$(this).hide();
-	});
+
+	// 지역 모달
 	$('#rnL-ts .rnSltReg .slt-dep1 > ul > li').on('click',function() {
 		$(this).addClass('on').siblings().removeClass('on');
 		$(this).closest('div').next().show();
+		var thTxt = $(this).find('a').text();
+		
+		$('#rnL-ts .rnSltReg .slt-dep2 > ul > li').on('click', function() {
+			var thTxt2 = $(this).find('a').text();
+			$('#rnL-ts .d1 .regName').text(thTxt);
+			$('#rnL-ts .d1 .regDetail').text(thTxt2);
+			
+			$('#rnL-ts .rnSltReg').hide();
+		});
+		
 	});
-	
+
+	// 이미지 로딩 최적화
+	$("#rnL-listOuter img.itm-img").lazyload({
+		effect: "fadeIn"
+	});
 	
 	
 
