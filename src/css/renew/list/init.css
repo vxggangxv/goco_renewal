@@ -64,7 +64,7 @@ input.chk-cst[type=checkbox] + label.on {background: #fff url(http://img.go.co.k
 .rnL-contents .rnL-mOuter {position: relative; display: none;}
 
 /* 필터링*/
-.rnL-contents .rnL-fOuter {position: relative; border-top: 4px solid #fa6b0a; border-left: 1px solid #ddd; background: #f9f9f9; height: 100%;}
+.rnL-contents .rnL-fOuter {position: relative; border-top: 4px solid #fa6b0a; border-left: 1px solid #ddd; background: #f9f9f9; height: 100%; overflow-y: auto;}
 .rnL-contents .rnL-fOuter .d1 {position: relative; width: 97.5%; float: right; padding: 20px 32px 20px 8px; font-size: 16px; border-bottom: 1px solid  #e2e2e2; font-size: 0;}
 .rnL-contents .rnL-fOuter .d1.last {padding-bottom: 80px;}
 .rnL-contents .rnL-fOuter h2 {color: #333; font-size: 21px;}
@@ -203,7 +203,12 @@ input.chk-cst[type=checkbox] + label.on {background: #fff url(http://img.go.co.k
 
 
 
-
+/* fixed 설정 */
+.rnL-header, .rnL-ts, .rnL-ctgr {position: fixed; width: 100%; min-width: 1680px; background: #fff; z-index: 2;}
+.rnL-header {top: 0;}
+.rnL-ts {top: 93px; background: #f2f2f2;}
+.rnL-ctgr {top: 143px;}
+.rnL-contents {margin-top: 194px;}
 
 @media (max-width: 1680px) {
 	.rnL-contents .rnL-listOuter .bestC-outer {padding-bottom: 40px;}

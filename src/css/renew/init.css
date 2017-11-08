@@ -25,15 +25,13 @@
 /* 공통 */
 .rnM-mainDoor .rn-container
 , .rnM-contents .rn-container 
-	{position: relative; width: 1190px; min-width: auto; margin: 0 auto;}
+	{position: relative; width: 1200px; padding-left: 5px; min-width: auto; margin: 0 auto; box-sizing: border-box;}
 
 /* 헤더 영역 */
 .rnL-header {position: relative; border-top: 3px solid #fa6b0a; border-bottom: 1px solid #ddd; height: 120px;}
 .rnL-header .d-box {position: relative; top: 31px; font-size: 0;}
 .rnL-header .flr-box {top: 47px;}
-.rnL-header .d-box .dLink-box {position: relative;display: inline-block; margin-left: 40px; top: 2px;}
-.rnL-header .d-box .dLink-box a {font-size: 16px; color: #4d4d4d; font-weight: 700;}
-.rnL-header .d-box .dLink-box .mgl {position: relative; width: 1px; height: 14px; background: #d6d6d6; top: -5px; margin: 0 14px;}
+.rnL-header .d-box .dLink-box {top: 2px;}
 
 /* 대문 이미지 */
 .rnM-mainDoor {position: relative; width: 100%; height: 681px; background: #eaeaea url(http://img.go.co.kr/renew/mainDoor_01.jpg) no-repeat center; padding-top: 170px;}
@@ -42,7 +40,7 @@
 .rnM-mainDoor .main-text .s1 {font-size: 31px; letter-spacing: -0.5px;}
 .rnM-mainDoor .main-text .s2 {font-size: 64px; letter-spacing: -3px;}
 
-.rnM-mainDoor .rn-schBox {position: relative; width: 1190px; margin: 34px auto 0; }
+.rnM-mainDoor .rn-schBox {position: relative; width: 100%; margin: 34px auto 0; }
 .rnM-mainDoor .rn-schBox > div {float: left;}
 .rnM-mainDoor .rn-schInner {position: relative; width: 1053px; height: 151px; border-top: 4px solid #fa6b0a; background: url(http://img.go.co.kr/rgbaW_80.png) repeat; padding: 27px 10px 0px 3px;}
 .ie8 .rnM-mainDoor .rn-schInner {background: #fff;}
