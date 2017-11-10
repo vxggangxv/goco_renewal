@@ -1,4 +1,15 @@
 $(function () {
+
+	var moHeight = $(window).height() - 205;
+	//console.log(moHeight);
+	var mHeight = $("#rnL-mOuter #map, #rnL-fOuter").height(moHeight);
+	$("#rnL-mOuter, #rnL-fOuter").css({
+		"position": "fixed",
+		"right": 0,
+		"top": "205px",
+		"width": "40.5%"
+	});
+
 	
 	// 검색결과 예약현황 퍼센트 애니메이션
     activeInfo();
@@ -44,11 +55,6 @@ $(function () {
 	}
 	
 	
-	// 카테고리 클릭 이벤트
-	$("#rnL-ctgr .ul1 > li > a").on('click', function () {
-		var idx = $(this).parent().index();
-		$(this).parent().addClass('on').siblings().removeClass('on');
-	});
 
 	// 필터보기/ 지도보기 클릭이벤트
 	$("#rnL-ctgr .slt-mf").on('click', function () {
@@ -109,42 +115,8 @@ $(function () {
 		values_separator: " ~ "
 	});
 	
-	// 배경 클릭 시
-	$('#backDrop').click(function() {
-		$('#rnL-ts .rnSltCal').hide();
-		$('#rnL-ts .rnSltReg').hide();
-		$(this).hide();
-	});
-	
-	// 달력 등장
-	$('#rnL-ts .d1 .i-gCal, #rnL-ts .d1 span[class*=Date]').click(function() {
-		$('#backDrop').show();
-		$('#rnL-ts .rnSltReg').hide();
-		$('#rnL-ts .rnSltCal').fadeIn();
-	});
-	
-	// 지역선택 등장
-	$('#rnL-ts .d1 .i-gSpot, #rnL-ts .d1 span[class*=reg]').click(function() {
-		$('#backDrop').show();
-		$('#rnL-ts .rnSltCal').hide();
-		$('#rnL-ts .rnSltReg').fadeIn();
-	});
 
-	// 지역 모달
-	$('#rnL-ts .rnSltReg .slt-dep1 > ul > li').on('click',function() {
-		$(this).addClass('on').siblings().removeClass('on');
-		$(this).closest('div').next().show();
-		var thTxt = $(this).find('a').text();
-		
-		$('#rnL-ts .rnSltReg .slt-dep2 > ul > li').on('click', function() {
-			var thTxt2 = $(this).find('a').text();
-			$('#rnL-ts .d1 .regName').text(thTxt);
-			$('#rnL-ts .d1 .regDetail').text(thTxt2);
-			
-			$('#rnL-ts .rnSltReg').hide();
-		});
-		
-	});
+	
 
 	// 이미지 로딩 최적화
 	$("#rnL-listOuter img.itm-img").lazyload({

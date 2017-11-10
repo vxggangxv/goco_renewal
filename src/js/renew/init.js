@@ -10,9 +10,14 @@ $(function() {
 	
 	// 지역선택 등장
 	$('#rn-schBox .d1').click(function() {
-		$('#backDrop').show();
-		$('#rn-schBox [class*=rnSlt]').hide();
-		$('#rn-schBox .rnSltReg').fadeIn();
+		if ($('#rn-schBox .rnSltReg').css('display') == 'block') {
+			$('#rn-schBox .rnSltReg').hide();
+		} else {
+			$('#backDrop').show();
+			$('#rn-schBox [class*=rnSlt]').hide();
+			$('#rn-schBox .rnSltReg').fadeIn();
+			
+		}
 	});
 	// 지역 모달
 	$('#rn-schBox .rnSltReg .slt-dep1 > ul > li').on('click',function() {
@@ -33,16 +38,24 @@ $(function() {
 	
 	// 달력 등장
 	$('#rn-schBox .d2').click(function() {
-		$('#backDrop').show();
-		$('#rn-schBox .rnSltReg, #rn-schBox .rnSltCtg').hide();
-		$('#rn-schBox .rnSltCal').fadeIn();
+		if ($('#rn-schBox .rnSltCal').css('display') == 'block') {
+			$('#rn-schBox .rnSltCal').hide();
+		} else {
+			$('#backDrop').show();
+			$('#rn-schBox .rnSltReg, #rn-schBox .rnSltCtg').hide();
+			$('#rn-schBox .rnSltCal').fadeIn();
+		}
 	});
 	
 	// 유형선택 등장
 	$('#rn-schBox .d3').click(function() {
-		$('#backDrop').show();
-		$('#rn-schBox [class*=rnSlt]').hide();
-		$('#rn-schBox .rnSltCtg').fadeIn();
+		if ($('#rn-schBox .rnSltCtg').css('display') == 'block') {
+			$('#rn-schBox .rnSltCtg').hide();
+		} else {
+			$('#backDrop').show();
+			$('#rn-schBox [class*=rnSlt]').hide();
+			$('#rn-schBox .rnSltCtg').fadeIn();
+		}
 	});
 	$('#rn-schBox .rnSltCtg > ul > li > a').click(function() {
 		var thTxt = $(this).text();
@@ -52,9 +65,13 @@ $(function() {
 	
 	// 객실/인원 선택 등장
 	$('#rn-schBox .d4').click(function() {
-		$('#backDrop').show();
-		$('#rn-schBox [class*=rnSlt]').hide();
-		$('#rn-schBox .rnSltNum').fadeIn();
+		if ($('#rn-schBox .rnSltNum').css('display') == 'block') {
+			$('#rn-schBox .rnSltNum').hide();
+		} else {
+			$('#backDrop').show();
+			$('#rn-schBox [class*=rnSlt]').hide();
+			$('#rn-schBox .rnSltNum').fadeIn();
+		}
 		
 	});
 	

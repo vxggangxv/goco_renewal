@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.rn-container {width: 1100px; margin: 0 auto;}
+
+.prd-basic-sec {margin-top: 50px;}
+.prd-basic {}
+.prd-basic > div {float: left; height: 424px;}
+.prd-basic .prd-imgBox {width: 442px;}
+.prd-basic .prd-infoBox {margin-left: 36px; width: 622px;}
+.prd-basic .prd-infoBox .d1 {}
+.prd-basic .prd-infoBox .d1 > a > span {display: inline-block; vertical-align: middle;}
