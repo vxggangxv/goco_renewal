@@ -59,7 +59,7 @@
 .rnM-mainDoor .rn-schInner .d2-2 .p1 {border-left-color: #98989a;}
 .rnM-mainDoor .rn-schBox [class*=cm-s]:after {
 	content: ""; display: inline-block; position: absolute;
-	background: url(http://img.go.co.kr/renew/sch_sprt.jpg) no-repeat center;
+	background: url(http://img.go.co.kr/renew/sch_sprt.png) no-repeat center;
 }
 .rnM-mainDoor .rn-schInner .cm-s1 {padding: 19px 18px 0 14px;}
 .rnM-mainDoor .rn-schInner .cm-s2, .rnM-mainDoor .rn-schInner .cm-s3 {padding: 19px 10px 0 45px;}
