@@ -582,7 +582,7 @@
 			</section>
 			<!--예약하기-->
 			<section class="sec-prd-buy">
-				<div class="rn-container prd-buy">
+				<div class="rn-container prd-buy" id="prd-buy">
 					<ul class="ul1 clr">
 						<li class="li1">
 							<p class="p0">
@@ -605,25 +605,8 @@
 						</li>
 						<li class="li3">
 							<span class="s-box">
-								<span class="s-q" onclick="$('#discount_pop').fadeIn();">?</span>
 								<span class="s-per">81</span>
 								<span class="s-pric">94,000</span>
-								
-								<!-- ? 아이콘 클릭 시 등장 -->
-								<div id="discount_pop" class="on">
-									<div class="tit">회원 추가할인 안내
-										<a href="javascript: $('#discount_pop').hide();" title="닫기"><img class="clsImg" src="http://img.go.co.kr/btn_x2.jpg" alt="닫기"></a>
-									</div>
-									<div class="text">
-										<p><b>1. 적립금 할인</b></p>
-										<p class="dot">회원가입시 바로 사용 가능한 <span>30,000원 쿠폰팩이 지급</span>됩니다.</p>
-										<p class="dot"> 로그인 후 결제시 <span>결제금액의 1%</span>를 적립금으로 돌려드립니다.</p>
-										<br>
-										<p><b>2. 쿠폰 할인</b></p>
-										<p class="dot"><span> 회원에게만 할인쿠폰</span>이 제공됩니다.</p>
-										<p class="dot">회원가입 후 다양한 쿠폰 혜택을 누리세요.</p>
-									</div>
-								</div>
 							</span>
 							<button type="button" class="appe-s-reset btn-b ftfm-mg">예약하기</button>
 						</li>
@@ -633,7 +616,90 @@
 			
 			<section class="rn-container sec-prd-common">
 				<div class="area-prd-tb">
-					<table class="prd-tb">
+					<!-- ? 아이콘 클릭 시 등장 -->
+					<div id="discount_pop" class="on">
+						<div class="tit">회원 추가할인 안내
+							<a href="javascript: $('#discount_pop').hide();" title="닫기"><img class="clsImg" src="http://img.go.co.kr/btn_x2.jpg" alt="닫기"></a>
+						</div>
+						<div class="text">
+							<p><b>1. 적립금 할인</b></p>
+							<p class="dot">회원가입시 바로 사용 가능한 <span>30,000원 쿠폰팩이 지급</span>됩니다.</p>
+							<p class="dot"> 로그인 후 결제시 <span>결제금액의 1%</span>를 적립금으로 돌려드립니다.</p>
+							<br>
+							<p><b>2. 쿠폰 할인</b></p>
+							<p class="dot"><span> 회원에게만 할인쿠폰</span>이 제공됩니다.</p>
+							<p class="dot">회원가입 후 다양한 쿠폰 혜택을 누리세요.</p>
+						</div>
+					</div>
+					<!-- 최저가 보상제 안내 팝업 -->
+					<div class="lowestPric_pop" id="lowestPric_pop">
+						<div class="lowestPric_area">
+							<div class="price_top">
+								<img src="http://img.go.co.kr/price_all_pop_title.jpg" alt="최저가보상제안내">
+								<a href="javascript:$('#lowestPric_pop').hide();" class="pop_close"><img src="http://img.go.co.kr/price_all_pop_close.jpg" alt="닫기"></a>
+							</div>
+							<div class="price_mid">
+								<p class="note_txt">
+									고코투어 보다 더 <strong>저렴한 요금을 발견</strong>하셨다면 <strong>신고</strong>해 주십시요.<br>
+									고코투어 캐시로 그 <strong>차액을 전액 보상</strong>해 드립니다.
+								</p>
+								<ul class="list_guide">
+									<li>
+										<p>
+											최저가로 보장 받은 예약건은 완전하게 이용이 완료되어야<br>
+											그 차액을 보상 받을 수 있습니다.
+										</p>
+									</li>
+									<li>
+										<p>최저가 보장제는 다음의 내용으로 진행 됩니다.</p>
+										<div class="list_guide_inner">
+											<ul>
+												<li>
+													1. 타 판매사이트의 판매가격이 고코보다 싸다면, 접수해 주세요.
+													<ul>
+														<li>- 접수는 아래 신고하기로 접수하시면 됩니다.</li>
+													</ul>
+												</li>
+												<li>
+													2. 접수시에는 타 판매사이트 최종 결제 진행방법을 안내해 주셔야합니다.
+													<ul>
+														<li>- 판매처, 판매처의 URL 혹은 카테고리, 캡쳐 등</li>
+														<li>- 고코투어 관리자가 객관적으로 확인 가능하여야 합닌다.</li>
+													</ul>
+												</li>
+												<li>3. 담당자가 확인 후 고객님께 답변 메일을 발송합니다.</li>
+												<li>4. 시설 이용일 기준으로 3일(영업일) 이내에 그 차액을 고코투어캐쉬로 지급됩니다.</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<p>아래의 조건과 부합되어야 합니다.</p>
+										<div class="list_guide_inner">
+											<ul>
+												<li>1. 예약 상품과 동일기간, 동일시설, 동일객실, 동일인원인 상품이어야 합니다.</li>
+												<li>2. 예약 상품과 변경 및 취소 등의 조건이 동일하여야 합니다.</li>
+												<li>3. 타 판매처의 자체 할인금(추천인할인, 적립금차감)에 의한 할인 가격은 제외됩니다.</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<p>다음의 상품은 최저가 보장에서 제외됩니다.</p>
+										<div class="list_guide_inner">
+											<ul>
+												<li>1. 전일 또는 당일 예약상품은 불가합니다.(담당자 확인 불가)</li>
+												<li>2. 고코투어 담당자가 해당 상품의 예약이 가능 하여야 합니다.(불가한 경우, 보상불가)</li>
+												<li>3. 취소 또는 환불된 상품</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_decl">
+									<a onclick="javascript:;" style="cursor:pointer">신고하기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="prd-tb" id=prd-tb>
 						<colgroup>
 							<col style="width: 360px;">
 							<col style="width: 224px;">
@@ -642,27 +708,132 @@
 						</colgroup>
 						<thead>
 							<tr>
-								<th>상품선택</th>
-								<th>기준인원/최대인원</th>
-								<th>요금(세금 봉사료 포함)</th>
-								<th>고코 앱 특가 <span class="c-ic3 i-lowP"></span></th>
+								<th class="nth-1">상품선택</th>
+								<th class="nth-2">기준인원/최대인원</th>
+								<th class="nth-3">요금(세금 봉사료 포함) <span class="s-q" onclick="$('#discount_pop').fadeIn('fast');">?</span></th>
+								<th class="nth-4">고코 앱 특가 <span class="c-ic3 i-lowP" onclick="$('#lowestPric_pop').show();"></span></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>오션투유 콘도 리노베이션</td>
-								<td>4인 / 7인</td>
-								<td>
+								<td class="nth-1">
+									오션투유 콘도 리노베이션<span class="c-ic3 i-iv"></span>
+								</td>
+								<td class="nth-2">4인 / 7인</td>
+								<td class="nth-3">
 									<s>330,000원</s>
 									<span class="orig-pric">94,000원~</span>
 								</td>
-								<td>
+								<td class="nth-4">
 									<s>94,000원</s>
-									<span class="spec-pric">89,0900원~</span>
-									<a href="" class="appBook">APP<br>예약</a>
+									<span class="spec-pric">89,000원~</span>
+									<a href="" class="app-bk">APP<br>예약</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="nth-1">
+									오션투유 호텔 리노베이션<span class="c-ic3 i-iv"></span>
+								</td>
+								<td class="nth-2">4인 / 7인</td>
+								<td class="nth-3">
+									<s>330,000원</s>
+									<span class="orig-pric">94,000원~</span>
+								</td>
+								<td class="nth-4">
+									<s>94,000원</s>
+									<span class="spec-pric">89,000원~</span>
+									<a href="" class="app-bk">APP<br>예약</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="nth-1">
+									오션투유 콘도<span class="c-ic3 i-iv"></span>
+								</td>
+								<td class="nth-2">4인 / 7인</td>
+								<td class="nth-3">
+									<s>330,000원</s>
+									<span class="orig-pric">84,000원~</span>
+								</td>
+								<td class="nth-4">
+									<s>94,000원</s>
+									<span class="spec-pric">79,000원~</span>
+									<a href="" class="app-bk">APP<br>예약</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="nth-1">
+									마운틴뷰 호텔 리노베이션<span class="c-ic3 i-iv"></span>
+								</td>
+								<td class="nth-2">4인 / 7인</td>
+								<td class="nth-3">
+									<s>330,000원</s>
+									<span class="orig-pric">84,000원~</span>
+								</td>
+								<td class="nth-4">
+									<s>94,000원</s>
+									<span class="spec-pric">79,000원~</span>
+									<a href="" class="app-bk">APP<br>예약</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="nth-1">
+									마운틴뷰 콘도<span class="c-ic3 i-iv"></span>
+								</td>
+								<td class="nth-2">4인 / 7인</td>
+								<td class="nth-3">
+									<s>330,000원</s>
+									<span class="orig-pric">74,000원~</span>
+								</td>
+								<td class="nth-4">
+									<s>94,000원</s>
+									<span class="spec-pric">71,000원~</span>
+									<a href="" class="app-bk">APP<br>예약</a>
 								</td>
 							</tr>
 						</tbody>
+						
+						<script>
+							$(function() {
+								// 상품별 갤러리 bxSlider 함수 연결
+								$("#prd-tb .i-iv").on('click', function() {
+									$(this).toggleClass('on');
+									var gLeft = $(this).position().left;
+									gLeft += 86;
+									
+									var prdGall = $('<div class="prd-gal-pop" style="left:' + gLeft + 'px;">'
+											+	'<div class="tit-box">'
+											+		'<strong>마운틴뷰 호텔 리노베이션</strong>'
+											+		'<a href="javascript:;" class="a-i-x a-x"></a>'
+											+	'</div>'
+											+	'<div class="cont-box">'
+											+		'<ul class="prdGal">'
+											+			'<li><img src="http://cache.go.co.kr/media/220/file.go.co.kr/tour/img1/1491201278_out5.jpg" alt="마운틴"></li>'
+											+			'<li><img src="http://cache.go.co.kr/media/220/file.go.co.kr/tour/img1/1491201279_out6.jpg" alt="마운틴"></li>'
+											+		'</ul>'
+											+	'</div>'
+											+ '</div>');
+									
+									if ($(this).next().css("display") == 'block') {
+										$(this).next().remove();
+									} else {
+										prdGall.insertAfter($(this));
+										$("#prd-tb .prd-gal-pop .a-x").click(function() {
+											$(this).closest(".prd-gal-pop").remove();
+										});
+										$("#prd-tb .prdGal").bxSlider({
+											auto:true,
+											autoControls: true,
+											speed: 500,
+											duration: 3000,
+											prevText: '<img src="http://img.go.co.kr/renew/common/btn_prev.png" alt="이전">',
+											nextText: '<img src="http://img.go.co.kr/renew/common/btn_next.png" alt="다음">',
+										});
+									}
+								});
+						
+								
+							});
+						</script>
 					</table>
 				</div>
 				<div class="area-prd-detail">
@@ -682,7 +853,8 @@
 		
 
 	</div>
-	
+
+
 
 </body>
 </html>
