@@ -22,6 +22,11 @@ $(function() {
 			$('#rnL-ts .rnSltCal').fadeIn();
 		}
 	});
+	// 선택완료 클릭시
+	$("#rnL-ts .rnSltCal .d-area .a2").on('click', function() {
+		$("#rnL-ts .rnSltCal").hide();
+		$("#backDrop").hide();
+	});
 	
 	// 지역선택 등장
 	$('#rnL-ts .d1 .i-gSpot, #rnL-ts .d1 span[class*=reg]').click(function() {

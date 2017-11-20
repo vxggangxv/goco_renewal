@@ -40,6 +40,7 @@ input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dot
 .on .i-chkOut, .i-chkOut.on {background-position: -60px -26px;}
 
 .c-ic3 {background: url(http://img.go.co.kr/renew/product/prd_sprt.png) no-repeat;}
+.c-ic3 {background: url(../../img/renew/product/prd_sprt.png) no-repeat;}
 .c-ic3.prd-cmm {height: 28px;}
 .c-ic3.i-heart {width: 16px;}
 .c-ic3.i-share {width: 18px; background-position: -30px 0;}
@@ -49,6 +50,7 @@ input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dot
 .c-ic3.i-term {width: 16px; height: 18px; background-position: 0 -60px;}
 .c-ic3.i-rArrW {width: 19px; height: 11px; background-position: -30px -60px;}
 .c-ic3.i-lowP {width: 75px; height: 22px; background-position: -60px -60px}
+.c-ic3.i-ivW {width: 47px; height: 18px; background-position: -150px -60px;}
 .c-ic3.i-iv {width: 70px; height: 18px; background-position: 0 -90px;}
 .i-iv.on {background-position: -90px -90px;}
 
@@ -305,13 +307,13 @@ div.pp_default .pp_description {position: relative; top: 4px;}
 .rnSltReg .slt-dep1 > ul > li.on a:before {content: ""; position: absolute; left: -15px; top: 7px; display: inline-block; width: 10px; height: 11px; background: url(http://img.go.co.kr/renew/rnLSprImg.png) no-repeat -120px -100px;}
 .rnSltReg .slt-dep2 {background: #fafafa; display: none;}
 
-/*유형*/
+/* 유형 */
 .rnSltCtg {width: 186px; left: 596px; top: 6px; background: #fff;}
 .rnSltCtg .ul1 {padding: 5px 0;}
 .rnSltCtg .ul1 > li > a {display: block; text-align: center; padding: 5px 0; font-size: 16px; color: #626262;}
 .rnSltCtg .ul1 > li:hover > a {color: #fa6b0a;}
 
-/*객실/인원 선택*/
+/* 객실/인원 선택 */
 .rnSltNum {left: 797px; top: 6px; width: 228px; background: #fff;}
 .rnSltNum .ul1 > li > * {display: inline-block; font-size: 16px; color: #626262;}
 .rnSltNum .ul1 {padding: 15px 0;}
@@ -327,3 +329,4 @@ div.pp_default .pp_description {position: relative; top: 4px;}
 .rnSltNum .quan > .s-l:before, .rnSltNum .quan > .s-r:before {left: 6px; top: 11px; width: 13px; height: 2px;}
 .rnSltNum .quan > .s-r:before {width: 12px; left: 6px;}
 .rnSltNum .quan > .s-r:after {width: 2px; height: 12px; left: 11px; top: 6px;}
+

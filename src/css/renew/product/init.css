@@ -89,7 +89,7 @@
 .ie8 .prd-buy .ul1 .li3 .btn-b:before {content: "▶"; border: 0; top: 0;}
 
 /* 회원 추가할인 안내 팝업 */
-#discount_pop {position:absolute; top:35px; right:170px; width:275px; text-align:left; display: none; z-index: 1;}
+#discount_pop {position:absolute; top:34px; right:169px; width:275px; text-align:left; display: none; z-index: 1;}
 #discount_pop .tit {padding-top:13px; padding-left:10px; height:35px; color:#fff; font-weight:600; background:url(http://img.go.co.kr/discount_bg.png) no-repeat; font-size:13px;}
 #discount_pop .tit .clsImg {position: absolute; right: 0; top: 10px;}
 #discount_pop .text {padding:10px; color:#3a3a3a; font-size:12px; line-height:1.5; background:#fff; border-left:1px solid #3a3a3a; border-right:1px solid #3a3a3a; border-bottom:1px solid #3a3a3a}
@@ -118,29 +118,59 @@
 .lowestPric_pop .lowestPric_area .price_mid .btn_decl {text-align:center; margin-top:20px;}
 .lowestPric_pop .lowestPric_area .price_mid .btn_decl a {display:inline-block; width:194px; height:42px; line-height:42px; font-size:18px; color:#fff !important; background-color:#000;}
 
-.sec-prd-common {}
-.area-prd-tb .prd-tb {position: relative; margin-bottom: 20px;}
-.area-prd-tb .prd-tb .s-q {position: relative; display: inline-block; color: #757575; font-weight: 700; font-size: 12px; font-family: 'Malgun gothic', sans-serif; border: 1px solid #999; width: 16px;  height: 16px; text-align: center; cursor: pointer; border-radius: 50%; line-height: 14px;}
-.area-prd-tb .prd-tb  > thead {position: relative; color: #252525; background: #f8f8fa; }
-.area-prd-tb .prd-tb  > thead > tr > th, .area-prd-tb .prd-tb tbody > tr > td {text-align: center; position: relative;}
-.area-prd-tb .prd-tb  > thead > tr > th {height: 50px; font-weight: 700; border-bottom: 1px solid #848484; padding-top: 2px;}
-.area-prd-tb .prd-tb  > thead > tr > th:first-child {text-indent: 76px; text-align: left;}
-.area-prd-tb .prd-tb tbody > tr > td:first-child {text-align: left; text-indent: 16px;}
-.area-prd-tb .prd-tb  > thead > tr > th .i-lowP {position: relative; top: -2px; display: inline-block; cursor: pointer;}
-.area-prd-tb .prd-tb tbody > tr > td {height: 64px; padding-top: 4px; border-bottom: 1px solid #ddd; color: #000;}
-.area-prd-tb .prd-tb tbody > tr > td:first-child {z-index: 1;}
-.area-prd-tb .prd-tb tbody > tr > td .i-iv {top: -2px; margin-left: 8px; cursor: pointer; display: inline-block;}
-.area-prd-tb .prd-tb tbody > tr > td s {font-size: 13px; color: #898989; display: block;}
-.area-prd-tb .prd-tb tbody > tr > td .orig-pric, .area-prd-tb .prd-tb tbody > tr > td .spec-pric {font-weight: 700;}
-.area-prd-tb .prd-tb tbody > tr > td.nth-4 s, .area-prd-tb .prd-tb tbody > tr > td.nth-4 .spec-pric  {position: relative; left: -34px;}
-.area-prd-tb .prd-tb tbody > tr > td .spec-pric {color: #ff3d47;}
-.area-prd-tb .prd-tb tbody > tr > td .app-bk {position: absolute; display: inline-block; width: 55px; height: 48px; background: #5489e2; border: 1px solid #4e6fa7; color: #fff; line-height: 1.2; padding-top: 7px; top: 7px; right: 30px; text-align: center; font-size: 14px; font-weight: 700;}
-.area-prd-tb .prd-tb tbody > tr {cursor: pointer;}
-.area-prd-tb .prd-tb tbody > tr.on > td {background: #fff8f0;}
-.area-prd-tb .prd-tb tbody > tr.on > td:first-child {font-weight: 700;}
+.sec-prd-list {}
+.sec-prd-list [class*=tr] {font-size: 0;}
+.sec-prd-list [class*=tr] > li {display: inline-block; font-size: 16px; vertical-align: middle;}
+.sec-prd-list .thead .s-q {position: relative; display: inline-block; color: #757575; font-weight: 700; font-size: 12px; font-family: 'Malgun gothic', sans-serif; border: 1px solid #999; width: 16px;  height: 16px; text-align: center; cursor: pointer; border-radius: 50%; line-height: 14px;}
+.sec-prd-list .thead {position: relative; color: #252525; background: #f8f8fa;}
+.sec-prd-list .thead .tr {height: 50px; border-bottom: 1px solid #848484;}
+.sec-prd-list .thead .tr > li {text-align: center; position: relative; top: 13px;}
+.sec-prd-list .thead .tr > li {font-weight: 700;}
+.sec-prd-list .thead .tr > li:first-child {text-indent: 76px;}
+.sec-prd-list .thead .tr > li .i-lowP {position: relative; top: -2px; display: inline-block; cursor: pointer;}
+.sec-prd-list .tr > li:first-child {text-align: left; width: 360px;}
+.sec-prd-list .tr > li.nth-2 {width: 224px;}
+.sec-prd-list .tr > li.nth-3 {width: 266px;}
+.sec-prd-list .tr > li.nth-4 {width: 250px;}
+.sec-prd-list .tbody {position: relative; margin-bottom: 20px;}
+.sec-prd-list .tbody > .tr {width: 1100px; margin: 0 auto; height: 64px; border-bottom: 1px solid #ddd; cursor: pointer;}
+.sec-prd-list .tbody > .tr > li {text-align: center; position: relative; top: 11px; background: transparent;}
+.sec-prd-list .tbody > .tr > li:first-child {text-indent: 16px; z-index: 1;}
+.sec-prd-list .tbody > .tr > li {padding-top: 4px; color: #000; line-height: 1.2;}
+.sec-prd-list .tbody > .tr > li .i-iv {top: -2px; margin-left: 8px; cursor: pointer; display: inline-block;}
+.sec-prd-list .tbody > .tr > li s {font-size: 13px; color: #898989; display: block;}
+.sec-prd-list .tbody > .tr > li .orig-pric, .sec-prd-list .tbody > .tr > li .spec-pric {font-weight: 700;}
+.sec-prd-list .tbody > .tr > li.nth-4 s, .sec-prd-list .tbody > .tr > li.nth-4 .spec-pric  {position: relative; left: -34px;}
+.sec-prd-list .tbody > .tr > li .spec-pric {color: #ff3d47;}
+.sec-prd-list .tbody > .tr > li .app-bk {position: absolute; display: inline-block; width: 55px; height: 48px; background: #5489e2; border: 1px solid #4e6fa7; color: #fff; line-height: 1.2; padding-top: 7px; top: -4px; right: 30px; text-align: center; font-size: 14px; font-weight: 700;}
+.sec-prd-list .tbody > .tr.on {background: #fff8f0;}
+.sec-prd-list .tbody > .tr.on > li:first-child {font-weight: 700;}
+.sec-prd-list .tbody > .tr-detail {position: relative; background: #f1f2f7; padding: 13px 0 20px;}
+.tr-detail .ul-step {width: 1100px; position: relative; margin: 0px auto 13px;}
+.tr-detail .ul-step > li {position : relative; float: left; color: #fff; background: #a0a0a0; height: 32px; padding: 6px 8px 0px 10px; font-size: 14px; font-weight: 700;}
+.tr-detail .ul-step > li.nth-1 {left: 140px;}
+.tr-detail .ul-step > li.nth-2 {left: 415px;}
+.tr-detail .ul-step > li.nth-3 {left: 627px;}
+.tr-detail .ul-step > li > span {display: inline-block; position: absolute;}
+.tr-detail .ul-step > li .c-ic3, .tr-detail .ul-step > li .s-txt {position: relative;}
+.tr-detail .ul-step > li [class^=left-] {left: -8px; border: 8px solid transparent;}
+.tr-detail .ul-step > li .left-topB {top: 0; border-top: 16px solid #a0a0a0;}
+.tr-detail .ul-step > li .left-bottomB {bottom: 0; border-bottom: 16px solid #a0a0a0;}
+.tr-detail .ul-step > li .rightB {right: -28px; top: 0; border: 16px solid transparent; border-left: 12px solid #a0a0a0;}
+.tr-detail .ul-step > li .c-ic3 {top: -2px; margin-left: 5px; cursor: pointer;}
+.tr-detail .ul-step:before {position: absolute; content: ""; width: 100%; height: 1px; background: #dadadc; top: 16px;}
+.tr-detail .area-trd-comp > div {position: relative; float: left;}
+.area-trd-comp .trd-comp-1 {}
+.trd-comp-1 .area-slt {border: 1px solid #e6e6e6; background: #fff; padding: 8px; margin-top: 8px;}
+.trd-comp-1 .area-slt .s-lbl {font-size: 16px; vertical-align: middle; margin-left: 26px;}
+.trd-comp-1 .area-slt .s-lbl:first-child {margin-left: 0px;}
+.trd-comp-1 .area-slt select {border: 1px solid #c0c0c0; background: #fff; height: 26px; width: 65px; margin-left: 9px;}
+.trd-comp-1 .area-slt .d2 {border: 1px solid #d7d7d7; margin-top: 8px; font-size: 16px; background: #f2f2f2; padding: 5px 8px 4px;}
+.trd-comp-1 .area-slt .d2 .s-l {float: left;}
+.trd-comp-1 .area-slt .d2 .s-r {float: right; color: #f93d3e;}
 
 /* 상품별 갤러리 팝업 */
-.prd-gal-pop {position: absolute; width: 340px; height: 270px; bottom: 22px; left: 360px; /*display: none;*/ display: block; z-index: 7;}
+.prd-gal-pop {position: absolute; width: 340px; height: 270px; bottom: 2px; left: 360px; /*display: none;*/ display: block; z-index: 7;}
 .prd-gal-pop > div {position: relative;}
 .prd-gal-pop .tit-box {height: 40px; border: 1px solid #333f52; border-bottom: 0; background: #3e4c63; color: #fff; font-family: "Dotum", sans-serif; font-size: 14px;line-height: 38px;}
 .prd-gal-pop .tit-box strong {font-weight: 700; letter-spacing: 0;}
@@ -152,3 +182,135 @@
 .prd-gal-pop .cont-box .prdGal {position: relative; margin: 0 auto;}
 .prd-gal-pop .cont-box .prdGal > li {position: relative; overflow: hidden; width: 318px; height: 210px;}
 .prd-gal-pop .cont-box .prdGal > li img {/*width: 326px; height: 202px;*/ width: 100%;}
+
+
+/* 상품선택시 달력 */
+.pdtCal {position: relative; width: 382px; color: #3b3b3b; background: #fff;}
+.pdtCal p.p-1 {position: relative; text-align: center; padding: 8px 18px 9px; font-size: 18px; font-weight: 700; border: 1px solid #e6e6e6; border-bottom: 0;}
+.pdtCal p.p-1 a {width: 30px; height: 30px; border-radius: 50%; border: 1px solid #898989;}
+.pdtCal p.p-1 .prev-a {float: left;}
+.pdtCal p.p-1 .next-a {float: right;}
+.pdtCal .cal-tb {position: relative; width: 100%; border-collapse: collapse; margin: 0 auto;}
+.pdtCal .cal-tb th, .pdtCal .cal-tb td {font-size: 14px; line-height: 1.3em; width: 55px;}
+.pdtCal .cal-tb th {padding: 6px 0; text-align: center;}
+.pdtCal .cal-tb th:first-child {border-left: 1px solid #e6e6e6;}
+.pdtCal .cal-tb th.sat {border-right: 1px solid #e6e6e6;}
+.pdtCal .cal-tb td {position: relative; font-family: "Arial", sans-serif; height: 52px; vertical-align: top; font-size:16px; padding: 0; text-align: right; border: 1px solid #e6e6e6;}
+.pdtCal .cal-tb td > div {height: 100%; font-size: 13px;}
+.pdtCal .cal-tb td .s-txt {position: relative; right: 7px; display: inline-block; margin-top: 1px;}
+
+/* 토, 일 체크*/
+.pdtCal .cal-tb td.spPrc .prc {color: #014b8e;}
+.pdtCal .cal-tb .sat, .pdtCal .cal-tb td.sat .prc {color: #00aeff;}
+.pdtCal .cal-tb .sun, .pdtCal .cal-tb td.sun .prc {color: #ff2b5c;}
+
+.pdtCal .cal-tb td.off > div {color: #969696; background: #fff;}
+
+.pdtCal .cal-tb td.chkIn, .pdtCal .cal-tb td.chkOut {position: relative; color: #fff; z-index: 1;}
+.pdtCal .cal-tb td.chkIn img, .pdtCal .cal-tb td.chkOut img {display: block; margin: -2px auto 0; position: relative; right: -1px;}
+.pdtCal .cal-tb td.ing > div {position: relative; background: #e5f4ff;}
+.pdtCal .cal-tb td.chkIn > div {background: #e33e3e;}
+.pdtCal .cal-tb td.chkOut > div {background: #5489e2 ;}
+.pdtCal .cal-tb td.chkIn:before, .pdtCal .cal-tb td.chkOut:before,
+.pdtCal .cal-tb td.ing:before {content: ""; display: block; position: absolute; top: -1px; left: -1px; width: 100%; height: 100%;}
+.pdtCal .cal-tb td.chkIn:before {border: 1px solid #b52b2b;}
+.pdtCal .cal-tb td.chkOut:before {border: 1px solid #335ea7;}
+.pdtCal .cal-tb td.ing:before {border: 1px solid #D1EAFD;}
+.pdtCal .cal-tb td .prc {position: absolute; bottom: -2px; right: 4px; font-size:11px; letter-spacing: -1px; display: block; width: 100%; color: #4561a0;}
+.pdtCal .cal-tb td.off .prc {color: #969696;}
+.pdtCal .cal-tb td.chkIn > div, .pdtCal .cal-tb td.chkOut > div,
+.pdtCal .cal-tb td.chkIn .prc, .pdtCal .cal-tb td.chkOut .prc {color: #fff;}
+.pdtCal .btn-a {clear: both; display: block; margin: 14px 50px 0; height: 42px; color: #fff; font-size: 18px; background: #ff7a2d; text-align: center; line-height: 40px;}
+.pdtCal .cal-tb td.spPrc > div {background: #f0f0f0; color: #969696; font-weight: 700;}
+.pdtCal .cal-tb td.spPrc:before {display: none;}
+.pdtCal .cal-tb td .i-spPrc {position: relative; top: -3px;}
+
+
+.area-trd-comp .trd-comp-2 {}
+.trd-comp-2 {width: 712px; min-height: 300px; background: #fff; border: 1px solid #e6e6e6; margin-left: 6px; padding-bottom: 52px;}
+
+.trd-comp-2 .c-red {font-size: 16px; color: #ff4748;}
+
+.trd-comp-2 input[type="checkbox"] {appearance: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none;
+    display: inline-block; position: relative; 
+    border: 1px solid #a5a5a5; width: 15px; height: 15px; border-radius: 0; outline: 0;
+    background: #fff; margin-right: 5px; margin-left: 15px;
+}
+.trd-comp-2 input[type="checkbox"]:checked {background: #fff url("http://img.go.co.kr/chk_bg.png") no-repeat 1px 2px;}
+
+.trd-comp-2 .part-con {position: relative;}
+.trd-comp-2 .part-con > ul {float: left;}
+.trd-comp-2 .part-con .dep-1 {position: relative;}
+.trd-comp-2 .part-con .dep-1 > li {position: relative; line-height: 1.2em; padding: 0; width: 440px; background: #fff;}
+.trd-comp-2 .part-con .dep-1:first-child > li:before {content: ""; display: block; width: 100%; height: 7px;}
+.trd-comp-2 .part-con .dep-1:first-child > li.on:before {content: ""; display: none;}
+.trd-comp-2 .part-con .dep-1 > li > .pkg-name {padding: 8px 0; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; z-index: 2; position: relative;}
+.trd-comp-2 .part-con .dep-1:first-child > li.on > .pkg-name {border-top: 0;}
+.trd-comp-2 .part-con .dep-1 > li > .pkg-name > .lbl {font-weight: 600; font-size: 15px; vertical-align: middle;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-name {padding: 12px 0; border-bottom: 1px solid #d7d7d7; border-top: 1px solid #d7d7d7; background: #f2f2f2;}
+.trd-comp-2 .part-con .dep-1.on + ul > li.on > .pkg-name {border-top: 0;}
+.trd-comp-2 .part-con .dep-1 > li.on {width: 710px;}
+.trd-comp-2 .part-con .dep-1 > li .pkg-con {position: relative;}
+.trd-comp-2 .part-con .dep-1 > li .pkg-con .con-1 {width: 440px;}
+
+.trd-comp-2 .part-con .ul-1 {background: #fff;}
+.trd-comp-2 .part-con .ul-1 li {padding: 7px 15px; border-bottom: 1px solid #d7d7d7; border-right: 1px solid #d7d7d7;}
+.trd-comp-2 .part-con .ul-1 li:first-child {border-top: 0;}
+.trd-comp-2 .part-con .ul-1 li > * {display: inline-block; vertical-align: middle;}
+.trd-comp-2 .part-con .ul-1 li > .lbl {display: inline-block; position: relative;  top: 3px; font-size: 15px; line-height: 1.4;}
+.trd-comp-2 .part-con .ul-1 li > .lbl.type-1 {width: 80px;}
+.trd-comp-2 .part-con .ul-1 li select {position: relative; float: right; padding: 3px 6px 4px; font-size: 15px; border-radius: 0; border:1px solid #bcbcbc; width: 256px; max-height: 32px;}
+.trd-comp-2 .part-con .ul-1 li option {font-size: 15px; padding: 4px 6px;}
+
+.trd-comp-2 .part-con .ul-1 li .pdt-prc {text-align: right; display: block; float: right; margin-top: 2px; font-size: 16px;}
+
+.trd-comp-2 .part-con .ul-1 li .pdt-prc > s, .trd-comp-2 .part-con .ul-1 li .pkg-prc > .c-red {margin-right: 5px;}
+.trd-comp-2 .part-con .ul-1 li .quan {-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+    position: relative; width: 70px; height: 24px; margin: 0 auto; border: 1px solid #bbb; background: #fff; box-sizing: border-box; text-align: center; display: inline-block; margin-left: 5px; top: -1px;
+}
+.trd-comp-2 .part-con .ul-1 li .quan input.inp {width: 32px; height: 24px; text-align: center; font-size: 13px; line-height: 1.7em; border: none; border-left: 1px solid #bbb; border-right: 1px solid #bbb; font-weight: 800; color: #999; background-color: transparent; position: relative; top: -1px;}
+.trd-comp-2 .part-con .ul-1 li .quan input.inp, .trd-comp-2 .part-3 .ul-1 li .quan input.inp.on, .trd-comp-2 .part-3 .ul-1 li td.on .quan input.inp {color: #202020;}
+.trd-comp-2 .part-con .ul-1 li .quan > span {position: relative; top: 0px; display: inline-block; width: 16px; height: 100%; font-size: 14px; text-align: center; cursor: pointer; line-height: 1.7em;}
+.trd-comp-2 .part-con .ul-1 li .quan > .s-l {float: left;}
+.trd-comp-2 .part-con .ul-1 li .quan > .s-r {float: right; right: 2px;}
+
+.trd-comp-2 .part-con .dep-1 > li > .pkg-con {display: none;}
+.trd-comp-2 .part-con .dep-1 > li .pkg-con .con-2 {width: 270px;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con {display: block;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 {position: absolute; right: 0; top: 0; display: block;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > .type-1 {position: relative; font-size: 15px; padding: 0px 10px 0px 10px; margin-top: 2px; line-height: 20px;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > p.nth-1 {margin-top: 6px; font-weight: 700;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > p.last {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > .p-txt {padding-left: 26px; letter-spacing: -1px;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > .p-txt .dot {position: absolute; left: 10px;}
+
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > p.btn-p {position: absolute; width: 100%; bottom: 1px; right: 0px; text-align: center; padding: 0; background: #a0a0a0;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 > p.btn-p > a {display: block; padding: 7px 0; font-size: 15px; color: #fff; line-height: 1.2;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 .i-plus-btn {display: inline-block; position: relative; width: 14px; height: 14px; border-radius: 50%; border: 1px solid #fff; vertical-align: middle; top: -1px; margin-left: 3px;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 .i-plus-btn:before,
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 .i-plus-btn:after {content: ""; display: block; position: absolute; top: 0; left: 0; background: #fff;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 .i-plus-btn:before {width: 6px; height: 2px; left: 3px; top: 5px;}
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 .i-plus-btn:after {width: 2px; height: 6px; left: 5px; top: 3px;}
+
+.trd-comp-2 .part-con .dep-1 > li.on > .pkg-con .con-2 a.gal-link {position: relative; display: inline-block; background: #f5f5f5; border: 1px solid #d7d7d7; padding: 5px 10px; text-align: center; left: 15px; top: 10px; text-align: center;}
+
+.trd-comp-2 .d-total {display: block; clear: both; position: absolute; left: 8px; width: 694px; border: 1px solid #d7d7d7; font-size: 16px; background: #f2f2f2; padding: 5px 8px 4px; bottom: 8px;}
+.trd-comp-2 .d-total .s-l {float: left;}
+.trd-comp-2 .d-total .s-r {float: right;}
+
+.trd-comp-2 .con-2 .bt0-layer {display: none; position: absolute; left: 5px; top: 100%; margin-top: 5px;  width: 357px;  background: #fff; z-index: 1;}
+.trd-comp-2 .con-2 .bt0-layer > h3 {color: #fff; font-size: 15px; background: #3e4c63; height: 40px; padding-top: 20px; box-sizing: border-box; text-indent: 14px; border: 1px solid #333f52; border-bottom: 0;}
+.trd-comp-2 .con-2 .bt0-layer > h3 .close-a {position: absolute; right: 26px; top: 12px; width: 16px;}
+.trd-comp-2 .con-2 .bt0-layer > h3 img {width: 100%;}
+.trd-comp-2 .con-2 .bt0-layer > .txt-box {position: relative; padding: 8px 10px; max-height: 320px; overflow-y: auto; border: 1px solid #d2d2d2; border-top: 0;}
+.trd-comp-2 .con-2 .bt0-layer .p-txt {position: relative; font-size: 14px; padding: 0px; margin-top: 5px; line-height: 22px;}
+.trd-comp-2 .con-2 .bt0-layer .p-txt:first-child {margin-top: 0;}
+.trd-comp-2 .con-2 .bt0-layer .p-txt .dot {position: absolute; left: 15px;}
+
+/*.trd-comp-2 .part-con .dep-1 > li .pkg-prc, .trd-comp-2 .part-1 .single-prc.on {font-size: 15px; box-sizing: border-box; border: 0; background: #e6e6e6; border-top: 1px solid #a2a2a2; height: 39px;}
+.trd-comp-2 .part-con .dep-1 > li .pkg-prc {padding: 10px 15px; width: 100%; position: absolute; bottom: 0; left: 0;}
+.trd-comp-2 .part-1 .single-prc.on {margin: 0; position: absolute; bottom: 0px; padding: 8px 15px; width: 100%;}
+
+.trd-comp-2 .part-3 {background: #bf2d00;}
+.trd-comp-2 .part-3 .i-close {float: right; position: relative; right: 12px; top: 5px; width: 20px; cursor: pointer;}*/
+

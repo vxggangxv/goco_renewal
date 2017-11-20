@@ -52,9 +52,59 @@ $(function() {
 	});
 	
 	// 상품 클릭시 줄 선택
-	$("#prd-tb tbody tr").on("click", function() {
+	$("#prd-tb .tr").on("click", function() {
 		$(this).siblings().removeClass('on');
 		$(this).toggleClass('on');
+	});
+	
+	// 높이 조절
+	var c1_ht = $("#prd-tb .trd-comp-1").height();
+	console.log(c1_ht);
+	$("#prd-tb .trd-comp-2").css({
+		"min-height": c1_ht
+	});
+	
+	$.each($("#part-con .pkg-con .con-1"), function() {
+		var c2_ht = $(this).height() + 1;
+		$(this).next().height(c2_ht);
+	});
+	
+	$("#prd-tb .trd-comp-2 span.lbl").on("click", function() {
+		/*$(this).closest("ul").next().hide();*/
+		$(this).closest("li").toggleClass("on");
+		$(this).closest("ul").toggleClass("on");
+		var isChecked = $(this).prev().prop("checked");
+		isChecked = !isChecked;
+		$(this).prev().prop("checked", isChecked);
+		/*if( isChecked ){
+			$(this).closest("li").find(".slt-drop").addClass("on");
+		} else {
+			$(this).closest("li").find(".slt-drop").removeClass("on");
+		}*/
+		var c2_ht = $(this).closest('li').find('.pkg-con .con-1').height() + 1;
+		$(this).closest('li').find('.pkg-con .con-1').next().height(c2_ht);
+		/*$.each($("#part-con .pkg-con .con-1"), function() {
+			var c2_ht = $(this).height() + 1;
+			$(this).next().height(c2_ht);
+		});*/
+	});
+	$("#prd-tb .trd-comp-2 input[type=checkbox]").on("click", function() {
+		/*$(this).closest("ul").next().hide();*/
+		$(this).closest("li").toggleClass("on");
+		$(this).closest("ul").toggleClass("on");
+		$("#pdtSlt-pb").toggleClass("on");
+		var isChecked = $(this).prop("checked");
+		/*if( isChecked ){
+			$(this).closest("li").find(".slt-drop").addClass("on");
+		} else {
+			$(this).closest("li").find(".slt-drop").removeClass("on");
+		}*/
+		var c2_ht = $(this).closest('li').find('.pkg-con .con-1').height() + 1;
+		$(this).closest('li').find('.pkg-con .con-1').next().height(c2_ht);
+		/*$.each($("#part-con .pkg-con .con-1"), function() {
+			var c2_ht = $(this).height() + 1;
+			$(this).next().height(c2_ht);
+		});*/
 	});
 	
 	
