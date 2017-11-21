@@ -51,26 +51,41 @@ $(function() {
 		$("html, body").stop().animate({scrollTop: scrTop},200);
 	});
 	
-	// 상품 클릭시 줄 선택
-	$("#prd-tb .tr").on("click", function() {
-		$(this).siblings().removeClass('on');
-		$(this).toggleClass('on');
+	// APP 예약 클릭 시
+	$("#prd-tb .app-bk").on("click", function() {
+		$("#app_download_pop").show();
 	});
 	
-	// 높이 조절
-	var c1_ht = $("#prd-tb .trd-comp-1").height();
-	console.log(c1_ht);
-	$("#prd-tb .trd-comp-2").css({
-		"min-height": c1_ht
+	// STEP2 패키지 선택 높이 조절
+	$.each($("#prd-tb .trd-comp-1"), function() {
+		var c1_ht = $("#prd-tb .trd-comp-1").height();
+			$("#prd-tb .trd-comp-2").css({
+			"min-height": c1_ht
+		});
 	});
 	
+	// STEP3 패키지 이용안내 설명 높이 조절
 	$.each($("#part-con .pkg-con .con-1"), function() {
 		var c2_ht = $(this).height() + 1;
 		$(this).next().height(c2_ht);
 	});
 	
+	// 상품 클릭시 줄 선택
+	$("#prd-tb .d-item .tr li.nth-1 .s-name").on("click", function() {
+		var target = $(this).closest('.d-item');
+		target.toggleClass('on').siblings().removeClass('on');
+		
+		// 상세 선택 등장
+		target.find('.tr-detail').toggleClass('on');
+		var c1_ht = $(this).closest('.d-item').find('.tr-detail').find('.trd-comp-1').height();
+		target.find('.tr-detail').find('.trd-comp-1').next().css({
+			"min-height": c1_ht
+		});
+		
+	});
+	
+	// 패키지 선택 시 기능
 	$("#prd-tb .trd-comp-2 span.lbl").on("click", function() {
-		/*$(this).closest("ul").next().hide();*/
 		$(this).closest("li").toggleClass("on");
 		$(this).closest("ul").toggleClass("on");
 		var isChecked = $(this).prev().prop("checked");
@@ -83,13 +98,8 @@ $(function() {
 		}*/
 		var c2_ht = $(this).closest('li').find('.pkg-con .con-1').height() + 1;
 		$(this).closest('li').find('.pkg-con .con-1').next().height(c2_ht);
-		/*$.each($("#part-con .pkg-con .con-1"), function() {
-			var c2_ht = $(this).height() + 1;
-			$(this).next().height(c2_ht);
-		});*/
 	});
 	$("#prd-tb .trd-comp-2 input[type=checkbox]").on("click", function() {
-		/*$(this).closest("ul").next().hide();*/
 		$(this).closest("li").toggleClass("on");
 		$(this).closest("ul").toggleClass("on");
 		$("#pdtSlt-pb").toggleClass("on");
@@ -101,11 +111,8 @@ $(function() {
 		}*/
 		var c2_ht = $(this).closest('li').find('.pkg-con .con-1').height() + 1;
 		$(this).closest('li').find('.pkg-con .con-1').next().height(c2_ht);
-		/*$.each($("#part-con .pkg-con .con-1"), function() {
-			var c2_ht = $(this).height() + 1;
-			$(this).next().height(c2_ht);
-		});*/
 	});
+	
 	
 	
 })

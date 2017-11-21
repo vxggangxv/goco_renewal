@@ -390,13 +390,44 @@
 						<div class="d1">
 							<a class="a1" href="javascript:;"><span>리얼리뷰</span> <span class="thColor1 num">435</span><span>건</span></a>
 							<span class="mgl"></span>
-							<a class="a2" href="javascript:;"><span class="c-ic3 prd-cmm i-heart"></span><span class="s1">찜하기</span></a>
+							<a class="a2" href="javascript:;" onclick="$(this).toggleClass('on');"><span class="c-ic3 prd-cmm i-heart"></span><span class="s1">찜하기</span></a>
 							<span class="mgl"></span>
-							<a class="a3" href="javascript:;"><span class="c-ic3 prd-cmm i-share"></span><span class="s1">공유</span></a>
+							<a class="a3" href="javascript:;" onclick="$('#share-pop-layer').toggleClass('on');"><span class="c-ic3 prd-cmm i-share"></span><span class="s1">공유</span></a>
 							<span class="mgl"></span>
 							<a class="a4" href="javascript:;"><span class="c-ic3 prd-cmm i-users"></span><span class="s1">단체문의</span></a>
 							<span class="mgl"></span>
-							<a class="a5" href="javascript:;"><span class="c-ic3 prd-cmm i-coupon"></span><span class="s1">3만원 할인</span><span class="c-ic3 prd-cmm i-down"></span></a>
+							<a class="a5" href="javascript:;" onclick="$('#app_download_pop').show();"><span class="c-ic3 prd-cmm i-coupon"></span><span class="s1">3만원 할인</span><span class="c-ic3 prd-cmm i-down"></span></a>
+							
+							<!-- 공유 팝업 -->
+							<div class="pop-layer" id="share-pop-layer">
+								<ul class="ul-1 clr">
+									<li class="nth-1">
+										<a href="">
+											<div><span class="c-ic3 sha-cmm i-twit"></span></div>
+											<p>트위터</p>
+										</a>
+									</li>
+									<li class="nth-2">
+										<a href="">
+											<div><span class="c-ic3 sha-cmm i-faceb"></span></div>
+											<p>페이스북</p>
+										</a>
+									</li>
+									<li class="nth-3">
+										<a href="">
+											<div><span class="c-ic3 sha-cmm i-email"></span></div>
+											<p>이메일</p>
+										</a>
+									</li>
+									<li class="nth-4">
+										<a href="">
+											<div><span class="c-ic3 sha-cmm i-sms"></span></div>
+											<p>문자</p>
+										</a>
+									</li>
+								</ul>
+								<a href="javascript:;" onclick="$(this).closest('.pop-layer').hide();" class="clsBtn a-i-x a-x"></a>
+							</div>
 						</div>
 						<div class="d-date clr">
 							<div class="d-date-1">
@@ -605,7 +636,6 @@
 						</li>
 						<li class="li3">
 							<span class="s-box">
-								<span class="s-per">81</span>
 								<span class="s-pric">94,000</span>
 							</span>
 							<button type="button" class="appe-s-reset btn-b ftfm-mg">예약하기</button>
@@ -710,378 +740,1263 @@
 				
 	
 				<div class="tbody" id="prd-tb">
-					<ul class="tr">
-						<li class="nth-1">
-							오션투유 콘도 리노베이션<span class="c-ic3 i-iv"></span>
-						</li>
-						<li class="nth-2">4인 / 7인</li>
-						<li class="nth-3">
-							<s>330,000원</s>
-							<span class="orig-pric">94,000원~</span>
-						</li>
-						<li class="nth-4">
-							<s>94,000원</s>
-							<span class="spec-pric">89,000원~</span>
-							<a href="" class="app-bk">APP<br>예약</a>
-						</li>
-					</ul>
-					<ul class="tr">
-						<li class="nth-1">
-							오션투유 호텔 리노베이션<span class="c-ic3 i-iv"></span>
-						</li>
-						<li class="nth-2">4인 / 7인</li>
-						<li class="nth-3">
-							<s>330,000원</s>
-							<span class="orig-pric">94,000원~</span>
-						</li>
-						<li class="nth-4">
-							<s>94,000원</s>
-							<span class="spec-pric">89,000원~</span>
-							<a href="" class="app-bk">APP<br>예약</a>
-						</li>
-					</ul>
-					
-					<div class="tr-detail">
-						<ul class="ul-step clr">
+					<div class="d-item">
+						<ul class="tr">
 							<li class="nth-1">
-								<span class="left-topB"></span><span class="left-bottomB"></span>
-								<span class="s-txt">STEP1 객실선택</span>
-								<span class="rightB"></span>
+								<span class="s-name">오션투유 콘도 리노베이션</span><span class="c-ic3 i-iv"></span>
 							</li>
-							<li class="nth-2">
-								<span class="left-topB"></span><span class="left-bottomB"></span>
-								<span class="s-txt">STEP2 패키지선택</span>
-								<span class="c-ic3 i-ivW"></span>
-								<span class="rightB"></span>
-							</li>
+							<li class="nth-2">4인 / 7인</li>
 							<li class="nth-3">
-								<span class="left-topB"></span><span class="left-bottomB"></span>
-								<span class="s-txt">패키지 안내</span>
-								<span class="rightB"></span>
+								<s>330,000원</s>
+								<span class="orig-pric">94,000원~</span>
+							</li>
+							<li class="nth-4">
+								<s>94,000원</s>
+								<span class="spec-pric">89,000원~</span>
+								<a href="javascript:;" class="app-bk">APP<br>예약</a>
 							</li>
 						</ul>
-
-						<div class="d-detail">
-							
-							<div class="rn-container area-trd-comp">
-								<div class="trd-comp-1">
-									<div class="pdtCal">
-										<p class="p-1"><a href="javascript:;" class="prev-a ic-lArrow"></a>2017년 10월<a href="javascript:;" class="next-a ic-rArrow"></a></p>
-										<table class="cal-tb">
-											<thead>
-												<tr>
-													<th class="sun">일</th>
-													<th>월</th>
-													<th>화</th>
-													<th>수</th>
-													<th>목</th>
-													<th>금</th>
-													<th class="sat">토</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="off sun"><div></div></td>
-													<td class="off"><div></div></td>
-													<td class="off"><div></div></td>
-													<td class="off"><div></div></td>
-													<td class="chkIn"><div><span class="s-txt">1</span><img src="http://img.go.co.kr/i_chkIn.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
-													<td class="chkOut"><div><span class="s-txt">2</span><img src="http://img.go.co.kr/renew/i_chkOut.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
-													<td class="sat"><div><span class="s-txt">3</span><span class="prc">52,000</span></div></td>
-												</tr>
-												<tr>
-													<td class="sun"><div><span class="s-txt">4</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">5</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">6</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">7</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">8</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">9</span><span class="prc">52,000</span></div></td>
-													<td class="sat"><div><span class="s-txt">10</span><span class="prc">52,000</span></div></td>
-												</tr>
-												<tr>
-													<td class="sun"><div><span class="s-txt">11</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">12</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">13</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">14</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">15</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">16</span><span class="prc">52,000</span></div></td>
-													<td class="sat"><div><span class="s-txt">17</span><span class="prc">52,000</span></div></td>
-												</tr>
-												<tr>
-													<td class="sun"><div><span class="s-txt">18</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">19</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">20</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">21</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">22</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">23</span><span class="prc">52,000</span></div></td>
-													<td class="sat"><div><span class="s-txt">24</span><span class="prc">52,000</span></div></td>
-												</tr>
-												<tr>
-													<td class="sun"><div><span class="s-txt">25</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">26</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">27</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">28</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">29</span><span class="prc">52,000</span></div></td>
-													<td><div><span class="s-txt">30</span><span class="prc">52,000</span></div></td>
-													<td class="off sat"><div></div></td>
-												</tr>
-											</tbody>
-										</table>
+						<div class="tr-detail">
+							<ul class="ul-step clr">
+								<li class="nth-1">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">STEP1 객실선택</span>
+									<span class="rightB"></span>
+								</li>
+								<li class="nth-2">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">STEP2 패키지선택</span>
+									<span class="c-ic3 i-ivW" onclick="$(this).closest('li').find('.pop-layer').toggleClass('on');"></span>
+									<span class="rightB"></span>
+									
+									<div class="pop-layer">
+										<h3>
+											패키지 안내
+											<a href="javascript:;" onclick="$(this).closest('div').toggleClass('on');" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+										</h3>
+										<!-- 해당페이지 새창 띄우기 -->
+										<ul class="ul-1 clr">
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_1.png" alt="조식패키지"></div>
+													<p>조식 패키지</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_2.png" alt="바베큐 테이블"></div>
+													<p>바베큐 테이블</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_3.png" alt="전동 바이크"></div>
+													<p>전동 바이크</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_4.png" alt="조개잡이"></div>
+													<p>조개잡이</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nth-3">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">패키지 안내</span>
+									<span class="rightB"></span>
+								</li>
+							</ul>
+						
+							<div class="d-detail">
+								
+								<div class="rn-container area-trd-comp">
+									<div class="trd-comp-1">
+										<div class="pdtCal">
+											<p class="p-1"><a href="javascript:;" class="prev-a ic-lArrow"></a>2017년 10월<a href="javascript:;" class="next-a ic-rArrow"></a></p>
+											<table class="cal-tb">
+												<thead>
+													<tr>
+														<th class="sun">일</th>
+														<th>월</th>
+														<th>화</th>
+														<th>수</th>
+														<th>목</th>
+														<th>금</th>
+														<th class="sat">토</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="off sun"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="chkIn"><div><span class="s-txt">1</span><img src="http://img.go.co.kr/i_chkIn.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
+														<td class="chkOut"><div><span class="s-txt">2</span><img src="http://img.go.co.kr/renew/i_chkOut.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">3</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">4</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">5</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">6</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">7</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">8</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">9</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">10</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">11</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">12</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">13</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">14</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">15</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">16</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">17</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">18</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">19</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">20</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">21</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">22</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">23</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">24</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">25</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">26</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">27</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">28</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">29</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">30</span><span class="prc">52,000</span></div></td>
+														<td class="off sat"><div></div></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="area-slt">
+											<div class="d1">
+												<span class="s-lbl">객실</span>
+												<select name="" id="">
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												<span class="s-lbl">성인</span>
+												<select name="" id="">
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												<span class="s-lbl">소아</span>
+												<select name="" id="">
+													<option value="">0</option>
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+											</div>
+											<div class="d2 clr">
+												<span class="s-l">객실단품금액</span>
+												<span class="s-r">94,000원</span>
+											</div>
+										</div>
 									</div>
 									
-									<div class="area-slt">
-										<div class="d1">
-											<span class="s-lbl">객실</span>
-											<select name="" id="">
-												<option value="">1</option>
-												<option value="">2</option>
-											</select>
-											<span class="s-lbl">성인</span>
-											<select name="" id="">
-												<option value="">1</option>
-												<option value="">2</option>
-											</select>
-											<span class="s-lbl">소아</span>
-											<select name="" id="">
-												<option value="">0</option>
-												<option value="">1</option>
-												<option value="">2</option>
-											</select>
+									<div class="trd-comp-2">
+										<div class="part-con clr" id="part-con">
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">조식 패키지</span>
+													</div>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-2">우거지 갈비탕</span>
+																	<div class="pdt-prc">
+																		<s>8,000원</s><span class="c-red">7,500원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																	<li class="clr">
+																	<span class="lbl type-2">황태 해장국</span>
+																	<div class="pdt-prc">
+																		<s>8,000원</s><span class="c-red">7,500원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">광어 미역국</span>
+																	<div class="pdt-prc">
+																		<s>12,000원</s><span class="c-red">11,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 last">주중 조식은, 메인 음식을 포함하여 김치, <br>무생채, 젓갈, 나물, 튀김이 제공됩니다.</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	조식패키지 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1">
+																		주중 조식은, 메인 음식을 포함하여 김치, 무생채, 젓갈, 나물, 튀김이 제공됩니다.<br>
+																		조식 운영시간은 07:30 ~ 10:00 까지 이용 가능합니다.
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">바베큐 테이블 대여</span>
+													</div>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-1">이용시간</span>
+																	<select name="" id="">
+																		<option value="">1부 16:00~18:00</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">테이블 수</span>
+																	<div class="pdt-prc">
+																		<s>30,000원</s><span class="c-red">15,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위<br>그릴, 집게, 가위</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	바베큐 테이블 대여 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
+																	<p class="type-1 p-txt"><span class="dot">2.</span> 이용시간은 2시간이며, 연장이 필요할 경우 미리 예약바랍니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">3.</span> 음식은 제공되지 않으니, 직접 준비해 오셔야 합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">4.</span> 야외 바베큐장으로, 기상악화시에는운영되지않습니다.  <br>이 경우 결제하신 금액은 환불 처리 됩니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">5.</span> 예약 후 , 시간에 맞춰 프론트에 이용요청 주시면 바로 이용하실 수 있습니다.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">전동바이크 패키지</span>
+													</div>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">1인승 1시간</span>
+																	<div class="pdt-prc">
+																		<s>15,000원</s><span class="c-red">14,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">1인승 2시간</span>
+																	<div class="pdt-prc">
+																		<s>26,000원</s><span class="c-red">24,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">2인승 1시간</span>
+																	<div class="pdt-prc">
+																		<s>20,000원</s><span class="c-red">18,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">2인승 2시간</span>
+																	<div class="pdt-prc">
+																		<s>35,000원</s><span class="c-red">30,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt"><span class="dot">1.</span>전동바이크 운영시간은 9:00~20:00 까지입니다.(20:00시 까지 반납) </p>
+															<p class="type-1 p-txt"><span class="dot">2.</span>전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가) </p>
+															<p class="type-1 p-txt last"><span class="dot">3.</span>보호장비 착용시에만 이용가능합니다.<br> (무상대여)</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	전동바이크 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 전동바이크 운영시간은 오전 9:00~20:00 까지입니다.(20:00시 까지 반납)</p>
+																	<p class="type-1 p-txt"><span class="dot">2.</span> 전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가)</p>
+																	<p class="type-1 p-txt"><span class="dot">3.</span> 보호장비 착용시에만 이용가능합니다.(무상대여)</p>
+																	<p class="type-1 p-txt"><span class="dot">4.</span> 국도 및 백사장 방향은 주행 불가합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">5.</span> 대여자 본인이외에, 제 3자의 운행은 불가합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">6.</span> 사고 및 분실, 파손에 따른 책임은, 대여자 100% 본인 부담 처리됩니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">7.</span> 사고 및 고장시에는 사무실로 전화 바랍니다.(문의 : 010-4429-0250)</p>
+																	<p class="type-1 p-txt"><span class="dot">8.</span> 우천시 이용 불가하며, 이용불가시 전액 환불처리 해드립니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">9.</span> 2인승의 경우, 동승자의 몸무게가 40Kg을 초과한 경우 탑승할 수 없습니다.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">조개잡기 패키지</span>
+													</div>
+													
+													<div class="pkg-con clr">  
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">양동이/삽/조개갈퀴 세트</span>
+																	<div class="pdt-prc">
+																		<s>10,000원</s><span class="c-red">9,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	조개잡기 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 더미 텍스트</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
 										</div>
-										<div class="d2 clr">
-											<span class="s-l">객실단품금액</span>
-											<span class="s-r">94,000원</span>
+										<div class="d-total clr">
+											<span class="s-l">객실 + 패키지 금액</span>
+											<!-- 패키지 선택시 예시 -->
+											<span class="s-r">
+												(<span class="c-red">94,000</span>원+<span class="c-red">7,500</span>원+<span class="c-red">25,000</span>원+<span class="c-red">14,000</span>원+<span class="c-red">9,000</span>원) = <span class="c-red f-bd">149,500</span>원
+											</span>
 										</div>
 									</div>
 								</div>
 								
-								<div class="trd-comp-2">
-									<div class="part-con clr" id="part-con">
-										<ul class="dep-1">
-											<li class="">
-												<div class="pkg-name">
-													<input type="checkbox"><span class="lbl">조식 패키지</span>
-												</div>
-												
-												<div class="pkg-con clr">
-													<div class="con-1">
-														<ul class="ul-1">
-															<li class="clr">
-																<span class="lbl type-2">우거지 갈비탕</span>
-																<div class="pdt-prc">
-																	<s>8,000원</s><span class="c-red">7,500원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-																<li class="clr">
-																<span class="lbl type-2">황태 해장국</span>
-																<div class="pdt-prc">
-																	<s>8,000원</s><span class="c-red">7,500원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-															</li>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">광어 미역국</span>
-																<div class="pdt-prc">
-																	<s>12,000원</s><span class="c-red">11,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-															</li>
-														</ul>
+							</div>
+						
+						</div>
+					</div>
+					<div class="d-item">
+						<ul class="tr">
+							<li class="nth-1">
+								<span class="s-name">오션투유 호텔 리노베이션</span><span class="c-ic3 i-iv"></span>
+							</li>
+							<li class="nth-2">4인 / 7인</li>
+							<li class="nth-3">
+								<s>330,000원</s>
+								<span class="orig-pric">94,000원~</span>
+							</li>
+							<li class="nth-4">
+								<s>94,000원</s>
+								<span class="spec-pric">89,000원~</span>
+								<a href="javascript:;" class="app-bk">APP<br>예약</a>
+							</li>
+						</ul>
+						<div class="tr-detail">
+							<ul class="ul-step clr">
+								<li class="nth-1">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">STEP1 객실선택</span>
+									<span class="rightB"></span>
+								</li>
+								<li class="nth-2">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">STEP2 패키지선택</span>
+									<span class="c-ic3 i-ivW" onclick="$(this).closest('li').find('.pop-layer').toggleClass('on');"></span>
+									<span class="rightB"></span>
+									
+									<div class="pop-layer">
+										<h3>
+											패키지 안내
+											<a href="javascript:;" onclick="$(this).closest('div').toggleClass('on');" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+										</h3>
+										<!-- 해당페이지 새창 띄우기 -->
+										<ul class="ul-1 clr">
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_1.png" alt="조식패키지"></div>
+													<p>조식 패키지</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_2.png" alt="바베큐 테이블"></div>
+													<p>바베큐 테이블</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_3.png" alt="전동 바이크"></div>
+													<p>전동 바이크</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_4.png" alt="조개잡이"></div>
+													<p>조개잡이</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nth-3">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">패키지 안내</span>
+									<span class="rightB"></span>
+								</li>
+							</ul>
+						
+							<div class="d-detail">
+								
+								<div class="rn-container area-trd-comp">
+									<div class="trd-comp-1">
+										<div class="pdtCal">
+											<p class="p-1"><a href="javascript:;" class="prev-a ic-lArrow"></a>2017년 10월<a href="javascript:;" class="next-a ic-rArrow"></a></p>
+											<table class="cal-tb">
+												<thead>
+													<tr>
+														<th class="sun">일</th>
+														<th>월</th>
+														<th>화</th>
+														<th>수</th>
+														<th>목</th>
+														<th>금</th>
+														<th class="sat">토</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="off sun"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="chkIn"><div><span class="s-txt">1</span><img src="http://img.go.co.kr/i_chkIn.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
+														<td class="chkOut"><div><span class="s-txt">2</span><img src="http://img.go.co.kr/renew/i_chkOut.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">3</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">4</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">5</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">6</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">7</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">8</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">9</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">10</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">11</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">12</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">13</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">14</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">15</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">16</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">17</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">18</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">19</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">20</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">21</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">22</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">23</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">24</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">25</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">26</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">27</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">28</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">29</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">30</span><span class="prc">52,000</span></div></td>
+														<td class="off sat"><div></div></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="area-slt">
+											<div class="d1">
+												<span class="s-lbl">객실</span>
+												<select name="" id="">
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												<span class="s-lbl">성인</span>
+												<select name="" id="">
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												<span class="s-lbl">소아</span>
+												<select name="" id="">
+													<option value="">0</option>
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+											</div>
+											<div class="d2 clr">
+												<span class="s-l">객실단품금액</span>
+												<span class="s-r">94,000원</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="trd-comp-2">
+										<div class="part-con clr" id="part-con">
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">조식 패키지</span>
 													</div>
-													<div class="con-2">
-														<p class="type-1 nth-1">이용안내</p>
-														<p class="type-1 last">주중 조식은, 메인 음식을 포함하여 김치, <br>무생채, 젓갈, 나물, 튀김이 제공됩니다.</p>
-														<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
-														
-														<div class="bt0-layer">
-															<h3>
-																조식패키지 이용안내
-																<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
-															</h3>
-															<div class="txt-box" style="max-height: 603px;">
-																<p class="p-txt">
-																	주중 조식은, 메인 음식을 포함하여 김치, 무생채, 젓갈, 나물, 튀김이 제공됩니다.<br>
-																	조식 운영시간은 07:30 ~ 10:00 까지 이용 가능합니다.
-																</p>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-2">우거지 갈비탕</span>
+																	<div class="pdt-prc">
+																		<s>8,000원</s><span class="c-red">7,500원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																	<li class="clr">
+																	<span class="lbl type-2">황태 해장국</span>
+																	<div class="pdt-prc">
+																		<s>8,000원</s><span class="c-red">7,500원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">광어 미역국</span>
+																	<div class="pdt-prc">
+																		<s>12,000원</s><span class="c-red">11,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 last">주중 조식은, 메인 음식을 포함하여 김치, <br>무생채, 젓갈, 나물, 튀김이 제공됩니다.</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	조식패키지 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1">
+																		주중 조식은, 메인 음식을 포함하여 김치, 무생채, 젓갈, 나물, 튀김이 제공됩니다.<br>
+																		조식 운영시간은 07:30 ~ 10:00 까지 이용 가능합니다.
+																	</p>
+																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-											</li>
-										</ul>
-										<ul class="dep-1">
-											<li class="">
-												<div class="pkg-name">
-													<input type="checkbox"><span class="lbl">바베큐 테이블 대여</span>
-												</div>
-												
-												<div class="pkg-con clr">
-													<div class="con-1">
-														<ul class="ul-1">
-															<li class="clr">
-																<span class="lbl type-1">이용날짜</span>
-																<select name="" id="">
-																	<option value="">2017-06-09</option>
-																</select>
-															</li>
-															<li class="clr">
-																<span class="lbl type-1">이용시간</span>
-																<select name="" id="">
-																	<option value="">1부 16:00~18:00</option>
-																</select>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">테이블 수</span>
-																<div class="pdt-prc">
-																	<s>30,000원</s><span class="c-red">15,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-															</li>
-														</ul>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">바베큐 테이블 대여</span>
 													</div>
-													<div class="con-2">
-														<p class="type-1 nth-1">이용안내</p>
-														<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위<br>그릴, 집게, 가위</p>
-														<p class="btn-p"><a href="javascript:;">더보기 <span class="i-plus-btn"></span></a></p>
-													</div>
-												</div>
-											</li>
-										</ul>
-										<ul class="dep-1">
-											<li class="">
-												<div class="pkg-name">
-													<input type="checkbox"><span class="lbl">전동바이크 패키지</span>
-												</div>
-												
-												<div class="pkg-con clr">
-													<div class="con-1">
-														<ul class="ul-1">
-															<li class="clr">
-																<span class="lbl type-1">이용날짜</span>
-																<select name="" id="">
-																	<option value="">2017-06-09</option>
-																</select>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">1인승 1시간</span>
-																<div class="pdt-prc">
-																	<s>15,000원</s><span class="c-red">14,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-1">이용시간</span>
+																	<select name="" id="">
+																		<option value="">1부 16:00~18:00</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">테이블 수</span>
+																	<div class="pdt-prc">
+																		<s>30,000원</s><span class="c-red">15,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위<br>그릴, 집게, 가위</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	바베큐 테이블 대여 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
+																	<p class="type-1 p-txt"><span class="dot">2.</span> 이용시간은 2시간이며, 연장이 필요할 경우 미리 예약바랍니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">3.</span> 음식은 제공되지 않으니, 직접 준비해 오셔야 합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">4.</span> 야외 바베큐장으로, 기상악화시에는운영되지않습니다.  <br>이 경우 결제하신 금액은 환불 처리 됩니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">5.</span> 예약 후 , 시간에 맞춰 프론트에 이용요청 주시면 바로 이용하실 수 있습니다.</p>
 																</div>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">1인승 2시간</span>
-																<div class="pdt-prc">
-																	<s>26,000원</s><span class="c-red">24,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">2인승 1시간</span>
-																<div class="pdt-prc">
-																	<s>20,000원</s><span class="c-red">18,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">2인승 2시간</span>
-																<div class="pdt-prc">
-																	<s>35,000원</s><span class="c-red">30,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
-																</div>
-															</li>
-														</ul>
+															</div>
+														</div>
 													</div>
-													<div class="con-2">
-														<p class="type-1 nth-1">이용안내</p>
-														<p class="type-1 p-txt"><span class="dot">1.</span>전동바이크 운영시간은 9:00~20:00 까지입니다.(20:00시 까지 반납) </p>
-														<p class="type-1 p-txt"><span class="dot">2.</span>전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가) </p>
-														<p class="type-1 p-txt last"><span class="dot">3.</span>보호장비 착용시에만 이용가능합니다.<br> (무상대여)</p>
-														<p class="btn-p"><a href="javascript:;">더보기 <span class="i-plus-btn"></span></a></p>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">전동바이크 패키지</span>
 													</div>
-												</div>
-											</li>
-										</ul>
-										<ul class="dep-1">
-											<li class="">
-												<div class="pkg-name">
-													<input type="checkbox"><span class="lbl">조개잡기 패키지</span>
-												</div>
-												
-												<div class="pkg-con clr">  
-													<div class="con-1">
-														<ul class="ul-1">
-															<li class="clr">
-																<span class="lbl type-1">이용날짜</span>
-																<select name="" id="">
-																	<option value="">2017-06-09</option>
-																</select>
-															</li>
-															<li class="clr">
-																<span class="lbl type-2">양동이/삽/조개갈퀴 세트</span>
-																<div class="pdt-prc">
-																	<s>10,000원</s><span class="c-red">9,000원</span>
-																	<p class="quan clr">
-																		<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
-																	</p>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">1인승 1시간</span>
+																	<div class="pdt-prc">
+																		<s>15,000원</s><span class="c-red">14,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">1인승 2시간</span>
+																	<div class="pdt-prc">
+																		<s>26,000원</s><span class="c-red">24,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">2인승 1시간</span>
+																	<div class="pdt-prc">
+																		<s>20,000원</s><span class="c-red">18,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">2인승 2시간</span>
+																	<div class="pdt-prc">
+																		<s>35,000원</s><span class="c-red">30,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt"><span class="dot">1.</span>전동바이크 운영시간은 9:00~20:00 까지입니다.(20:00시 까지 반납) </p>
+															<p class="type-1 p-txt"><span class="dot">2.</span>전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가) </p>
+															<p class="type-1 p-txt last"><span class="dot">3.</span>보호장비 착용시에만 이용가능합니다.<br> (무상대여)</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	전동바이크 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 전동바이크 운영시간은 오전 9:00~20:00 까지입니다.(20:00시 까지 반납)</p>
+																	<p class="type-1 p-txt"><span class="dot">2.</span> 전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가)</p>
+																	<p class="type-1 p-txt"><span class="dot">3.</span> 보호장비 착용시에만 이용가능합니다.(무상대여)</p>
+																	<p class="type-1 p-txt"><span class="dot">4.</span> 국도 및 백사장 방향은 주행 불가합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">5.</span> 대여자 본인이외에, 제 3자의 운행은 불가합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">6.</span> 사고 및 분실, 파손에 따른 책임은, 대여자 100% 본인 부담 처리됩니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">7.</span> 사고 및 고장시에는 사무실로 전화 바랍니다.(문의 : 010-4429-0250)</p>
+																	<p class="type-1 p-txt"><span class="dot">8.</span> 우천시 이용 불가하며, 이용불가시 전액 환불처리 해드립니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">9.</span> 2인승의 경우, 동승자의 몸무게가 40Kg을 초과한 경우 탑승할 수 없습니다.</p>
 																</div>
-															</li>
-														</ul>
+															</div>
+														</div>
 													</div>
-													<div class="con-2">
-														<p class="type-1 nth-1">이용안내</p>
-														<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
-														<p class="btn-p"><a href="javascript:;">더보기 <span class="i-plus-btn"></span></a></p>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">조개잡기 패키지</span>
 													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="d-total clr">
-										<span class="s-l">객실 + 패키지 금액</span>
-										<!-- 패키지 선택시 예시 -->
-										<span class="s-r">
-											(<span class="c-red">94,000</span>원+<span class="c-red">7,500</span>원+<span class="c-red">25,000</span>원+<span class="c-red">14,000</span>원+<span class="c-red">9,000</span>원) = <span class="c-red f-bd">149,500</span>원
-										</span>
+													
+													<div class="pkg-con clr">  
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">양동이/삽/조개갈퀴 세트</span>
+																	<div class="pdt-prc">
+																		<s>10,000원</s><span class="c-red">9,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	조개잡기 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 더미 텍스트</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="d-total clr">
+											<span class="s-l">객실 + 패키지 금액</span>
+											<!-- 패키지 선택시 예시 -->
+											<span class="s-r">
+												(<span class="c-red">94,000</span>원+<span class="c-red">7,500</span>원+<span class="c-red">25,000</span>원+<span class="c-red">14,000</span>원+<span class="c-red">9,000</span>원) = <span class="c-red f-bd">149,500</span>원
+											</span>
+										</div>
 									</div>
 								</div>
+								
 							</div>
-							
+						
 						</div>
-
 					</div>
-					<ul class="tr">
-						<li class="nth-1">
-							오션투유 콘도<span class="c-ic3 i-iv"></span>
-						</li>
-						<li class="nth-2">4인 / 7인</li>
-						<li class="nth-3">
-							<s>330,000원</s>
-							<span class="orig-pric">84,000원~</span>
-						</li>
-						<li class="nth-4">
-							<s>94,000원</s>
-							<span class="spec-pric">79,000원~</span>
-							<a href="" class="app-bk">APP<br>예약</a>
-						</li>
-					</ul>
+					<div class="d-item">
+						<ul class="tr">
+							<li class="nth-1">
+								<span class="s-name">오션투유 콘도</span><span class="c-ic3 i-iv"></span>
+							</li>
+							<li class="nth-2">4인 / 7인</li>
+							<li class="nth-3">
+								<s>330,000원</s>
+								<span class="orig-pric">84,000원~</span>
+							</li>
+							<li class="nth-4">
+								<s>94,000원</s>
+								<span class="spec-pric">79,000원~</span>
+								<a href="javascript:;" class="app-bk">APP<br>예약</a>
+							</li>
+						</ul>
+						<div class="tr-detail">
+							<ul class="ul-step clr">
+								<li class="nth-1">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">STEP1 객실선택</span>
+									<span class="rightB"></span>
+								</li>
+								<li class="nth-2">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">STEP2 패키지선택</span>
+									<span class="c-ic3 i-ivW" onclick="$(this).closest('li').find('.pop-layer').toggleClass('on');"></span>
+									<span class="rightB"></span>
+									
+									<div class="pop-layer">
+										<h3>
+											패키지 안내
+											<a href="javascript:;" onclick="$(this).closest('div').toggleClass('on');" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+										</h3>
+										<!-- 해당페이지 새창 띄우기 -->
+										<ul class="ul-1 clr">
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_1.png" alt="조식패키지"></div>
+													<p>조식 패키지</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_2.png" alt="바베큐 테이블"></div>
+													<p>바베큐 테이블</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_3.png" alt="전동 바이크"></div>
+													<p>전동 바이크</p>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div><img src="http://img.go.co.kr/renew/product/pkgImg_4.png" alt="조개잡이"></div>
+													<p>조개잡이</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nth-3">
+									<span class="left-topB"></span><span class="left-bottomB"></span>
+									<span class="s-txt">패키지 안내</span>
+									<span class="rightB"></span>
+								</li>
+							</ul>
+						
+							<div class="d-detail">
+								
+								<div class="rn-container area-trd-comp">
+									<div class="trd-comp-1">
+										<div class="pdtCal">
+											<p class="p-1"><a href="javascript:;" class="prev-a ic-lArrow"></a>2017년 10월<a href="javascript:;" class="next-a ic-rArrow"></a></p>
+											<table class="cal-tb">
+												<thead>
+													<tr>
+														<th class="sun">일</th>
+														<th>월</th>
+														<th>화</th>
+														<th>수</th>
+														<th>목</th>
+														<th>금</th>
+														<th class="sat">토</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="off sun"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="off"><div></div></td>
+														<td class="chkIn"><div><span class="s-txt">1</span><img src="http://img.go.co.kr/i_chkIn.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
+														<td class="chkOut"><div><span class="s-txt">2</span><img src="http://img.go.co.kr/renew/i_chkOut.png" alt="체크인" class="i-chkIn"><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">3</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">4</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">5</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">6</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">7</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">8</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">9</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">10</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">11</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">12</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">13</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">14</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">15</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">16</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">17</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">18</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">19</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">20</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">21</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">22</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">23</span><span class="prc">52,000</span></div></td>
+														<td class="sat"><div><span class="s-txt">24</span><span class="prc">52,000</span></div></td>
+													</tr>
+													<tr>
+														<td class="sun"><div><span class="s-txt">25</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">26</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">27</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">28</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">29</span><span class="prc">52,000</span></div></td>
+														<td><div><span class="s-txt">30</span><span class="prc">52,000</span></div></td>
+														<td class="off sat"><div></div></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="area-slt">
+											<div class="d1">
+												<span class="s-lbl">객실</span>
+												<select name="" id="">
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												<span class="s-lbl">성인</span>
+												<select name="" id="">
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+												<span class="s-lbl">소아</span>
+												<select name="" id="">
+													<option value="">0</option>
+													<option value="">1</option>
+													<option value="">2</option>
+												</select>
+											</div>
+											<div class="d2 clr">
+												<span class="s-l">객실단품금액</span>
+												<span class="s-r">94,000원</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="trd-comp-2">
+										<div class="part-con clr" id="part-con">
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">조식 패키지</span>
+													</div>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-2">우거지 갈비탕</span>
+																	<div class="pdt-prc">
+																		<s>8,000원</s><span class="c-red">7,500원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																	<li class="clr">
+																	<span class="lbl type-2">황태 해장국</span>
+																	<div class="pdt-prc">
+																		<s>8,000원</s><span class="c-red">7,500원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">광어 미역국</span>
+																	<div class="pdt-prc">
+																		<s>12,000원</s><span class="c-red">11,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 last">주중 조식은, 메인 음식을 포함하여 김치, <br>무생채, 젓갈, 나물, 튀김이 제공됩니다.</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	조식패키지 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1">
+																		주중 조식은, 메인 음식을 포함하여 김치, 무생채, 젓갈, 나물, 튀김이 제공됩니다.<br>
+																		조식 운영시간은 07:30 ~ 10:00 까지 이용 가능합니다.
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">바베큐 테이블 대여</span>
+													</div>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-1">이용시간</span>
+																	<select name="" id="">
+																		<option value="">1부 16:00~18:00</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">테이블 수</span>
+																	<div class="pdt-prc">
+																		<s>30,000원</s><span class="c-red">15,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위<br>그릴, 집게, 가위</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	바베큐 테이블 대여 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
+																	<p class="type-1 p-txt"><span class="dot">2.</span> 이용시간은 2시간이며, 연장이 필요할 경우 미리 예약바랍니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">3.</span> 음식은 제공되지 않으니, 직접 준비해 오셔야 합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">4.</span> 야외 바베큐장으로, 기상악화시에는운영되지않습니다.  <br>이 경우 결제하신 금액은 환불 처리 됩니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">5.</span> 예약 후 , 시간에 맞춰 프론트에 이용요청 주시면 바로 이용하실 수 있습니다.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">전동바이크 패키지</span>
+													</div>
+													
+													<div class="pkg-con clr">
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">1인승 1시간</span>
+																	<div class="pdt-prc">
+																		<s>15,000원</s><span class="c-red">14,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">1인승 2시간</span>
+																	<div class="pdt-prc">
+																		<s>26,000원</s><span class="c-red">24,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">2인승 1시간</span>
+																	<div class="pdt-prc">
+																		<s>20,000원</s><span class="c-red">18,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">2인승 2시간</span>
+																	<div class="pdt-prc">
+																		<s>35,000원</s><span class="c-red">30,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt"><span class="dot">1.</span>전동바이크 운영시간은 9:00~20:00 까지입니다.(20:00시 까지 반납) </p>
+															<p class="type-1 p-txt"><span class="dot">2.</span>전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가) </p>
+															<p class="type-1 p-txt last"><span class="dot">3.</span>보호장비 착용시에만 이용가능합니다.<br> (무상대여)</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	전동바이크 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 전동바이크 운영시간은 오전 9:00~20:00 까지입니다.(20:00시 까지 반납)</p>
+																	<p class="type-1 p-txt"><span class="dot">2.</span> 전동바이크 탑승 전, 운전면허증 확인은 필수입니다.(현장확인, 미소지시 이용불가)</p>
+																	<p class="type-1 p-txt"><span class="dot">3.</span> 보호장비 착용시에만 이용가능합니다.(무상대여)</p>
+																	<p class="type-1 p-txt"><span class="dot">4.</span> 국도 및 백사장 방향은 주행 불가합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">5.</span> 대여자 본인이외에, 제 3자의 운행은 불가합니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">6.</span> 사고 및 분실, 파손에 따른 책임은, 대여자 100% 본인 부담 처리됩니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">7.</span> 사고 및 고장시에는 사무실로 전화 바랍니다.(문의 : 010-4429-0250)</p>
+																	<p class="type-1 p-txt"><span class="dot">8.</span> 우천시 이용 불가하며, 이용불가시 전액 환불처리 해드립니다.</p>
+																	<p class="type-1 p-txt"><span class="dot">9.</span> 2인승의 경우, 동승자의 몸무게가 40Kg을 초과한 경우 탑승할 수 없습니다.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<ul class="dep-1">
+												<li class="">
+													<div class="pkg-name">
+														<input type="checkbox"><span class="lbl">조개잡기 패키지</span>
+													</div>
+													
+													<div class="pkg-con clr">  
+														<div class="con-1">
+															<ul class="ul-1">
+																<li class="clr">
+																	<span class="lbl type-1">이용날짜</span>
+																	<select name="" id="">
+																		<option value="">2017-06-09</option>
+																	</select>
+																</li>
+																<li class="clr">
+																	<span class="lbl type-2">양동이/삽/조개갈퀴 세트</span>
+																	<div class="pdt-prc">
+																		<s>10,000원</s><span class="c-red">9,000원</span>
+																		<p class="quan clr">
+																			<span class="s-l">-</span><input type="text" class="inp" value="0"><span class="s-r">+</span>
+																		</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="con-2">
+															<p class="type-1 nth-1">이용안내</p>
+															<p class="type-1 p-txt last"><span class="dot">1.</span> 패키지구성 : 테이블 (4인기준), 참숯, 그릴, 집게, 가위</p>
+															<p class="btn-p"><a href="javascript:;" onclick="$(this).parent().next().show();">더보기 <span class="i-plus-btn"></span></a></p>
+															
+															<div class="pop-layer">
+																<h3>
+																	조개잡기 이용안내
+																	<a href="javascript:;" onclick="$(this).closest('div').hide();" class="close-a"><img src="http://img.go.co.kr/mobile/my_close.png" alt="닫기"></a>
+																</h3>
+																<div class="txt-box">
+																	<p class="type-1 p-txt"><span class="dot">1.</span> 더미 텍스트</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="d-total clr">
+											<span class="s-l">객실 + 패키지 금액</span>
+											<!-- 패키지 선택시 예시 -->
+											<span class="s-r">
+												(<span class="c-red">94,000</span>원+<span class="c-red">7,500</span>원+<span class="c-red">25,000</span>원+<span class="c-red">14,000</span>원+<span class="c-red">9,000</span>원) = <span class="c-red f-bd">149,500</span>원
+											</span>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						
+						</div>
+					</div>
 				</div>
 						
 				<script>
@@ -1126,12 +2041,51 @@
 
 					});
 				</script>
+				
+				
+				<!-- 앱 유도 팝업 -->
+				<div class="app_download_pop" id="app_download_pop">
+					<div class="pop_Bg_bk"></div>
+					<div class="popwrap">
+						<div class="coupon_pack_pop">
+							<div class="coupon_pack_pop_top">
+								<img class="goco" src="http://img.go.co.kr/logo_sh_b.png">
+								<p><span class="orange_txt">고코투어 앱</span>설치 시 <span class="red_txt">30,000원</span> 쿠폰팩 즉시 지급!</p>
+								<a class="clsBtn" href="javascript:;" onclick="$(this).parents('.app_download_pop').hide();" title="닫기"><img src="http://img.go.co.kr/pop_close_Sbtn.png" alt="닫기"></a>
+							</div>
+							<div class="coupon_pack_pop_contents">
+								<ul class="clr">
+									<li class="goco_app_icon"><img src="http://img.go.co.kr/goco_app_Icon_m.png"></li>
+									<li class="txt_box">
+										<p class="title_txt">지금 고코투어 앱을 다운받으세요</p>
+										<p class="title_txt"> <span class="red_txt">30,000원</span> 쿠폰팩을 지급해드립니다!</p>
+										<p class="txt_s">
+											핸드폰 번호를 입력하시면<br><span class="orange_txt">앱 설치 방법 안내를 문자</span>로 보내드립니다. 
+										</p>
+									</li>
+								</ul>
+								<ul class="input_Box clr">
+									<li class="recipient"><label>·받는사람</label><input type="text" name="phone_d1" maxlength="3"><span>-</span><input type="text" name="phone_d2" maxlength="4"><span>-</span><input type="text" name="phone_d3" maxlength="4"></li>
+									<li class="send_Btn"><input type="button" value="전송"></li>
+								</ul>
+								<p>* 문자로 발송드린 URL을 클릭하시면 앱설치가 가능한 설치페이지로 이동합니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 					
 			</section>
 			
 			<section class="rn-container sec-prd-common">
 				<div class="area-prd-detail">
-					
+					<ul class="detail-tab">
+						<li><a href="javascript:;">상품소개</a></li>
+						<li><a href="javascript:;">이용후기</a></li>
+						<li><a href="javascript:;">오시는길</a></li>
+						<li><a href="javascript:;">축제/관광지/맛집</a></li>
+						<li><a href="javascript:;">상품문의</a></li>
+						<li><a href="javascript:;">자주묻는질문</a></li>
+					</ul>
 				</div>
 			</section>
 			<!--주변 다른 숙소-->
