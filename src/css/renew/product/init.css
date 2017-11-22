@@ -1,5 +1,5 @@
 @charset 'utf-8';
-
+body {height: 2000px;}
 .rn-gwrap {min-width: 1430px;}
 
 .prd-basic .bx-wrapper .bx-caption {}
@@ -384,3 +384,15 @@
 
 
 /* 상품 상세안내 탭 */
+.area-prd-detail {}
+.area-prd-detail .ul-tab {position: relative; border-bottom: 1px solid #888a89}
+.area-prd-detail .ul-tab > li {position: relative; float: left; width: 184.33px; border: 1px solid #e8e8e8; border-bottom: 0; margin-left: -1px;}
+.area-prd-detail .ul-tab > li.on {border: 1px solid #888a89; border-bottom: 0; z-index: 1;}
+.area-prd-detail .ul-tab > li > a {display: block; height: 60px; text-align: center; padding-top: 19px; font-size: 17px; background: #f8f8fa; color: #737373;}
+.area-prd-detail .ul-tab > li.on > a {background: #fff; color: #343535;}
+.area-prd-detail .ul-contents {position: relative;}
+.area-prd-detail .ul-contents > li {position: relative; border-top: 1px solid #dddddd; padding: 35px 0px;}
+.area-prd-detail .ul-contents > li:first-child {border: 0;}
+.area-prd-detail .ul-contents > li > div {position: relative; float: left;}
+.area-prd-detail .ul-contents .d-tit {width: 240px; font-weight: 700; padding-left: 20px; font-size: 17px;}
+.area-prd-detail .ul-contents .d-txt {width: 860px; line-height: 2;}

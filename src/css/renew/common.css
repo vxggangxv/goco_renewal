@@ -1,7 +1,8 @@
 @charset 'utf-8';
-body {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dotum', sans-serif; color:#000; line-height:1.5; letter-spacing:0.5px;}
-a:link, a:visited, a:hover, a:active {text-decoration:none; color:#000}
-input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dotum', sans-serif; color:#000}
+body {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dotum', sans-serif; line-height:1.5; letter-spacing:0.5px;}
+body, a {color: #333;}
+a:link, a:visited, a:hover, a:active {text-decoration:none;}
+input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dotum', sans-serif; color:#333;}
 
 
 /* 초기화 */
