@@ -76,11 +76,17 @@ $(function() {
 		target.toggleClass('on').siblings().removeClass('on');
 		
 		// 상세 선택 등장
+		target.siblings().find('.tr-detail').removeClass('on');
 		target.find('.tr-detail').toggleClass('on');
 		var c1_ht = $(this).closest('.d-item').find('.tr-detail').find('.trd-comp-1').height();
 		target.find('.tr-detail').find('.trd-comp-1').next().css({
 			"min-height": c1_ht
 		});
+		
+		// 클릭 시 스크롤 이동
+		var scrTg = $(this).closest('.d-item').find('.tr').offset().top - 64;
+		console.log(scrTg);
+		$(window).scrollTop(scrTg);
 		
 	});
 	
@@ -113,7 +119,12 @@ $(function() {
 		$(this).closest('li').find('.pkg-con .con-1').next().height(c2_ht);
 	});
 	
-	
+	// 상품소개 탭
+	$("#area-prd-detail .ul-tab > li").on("click", function() {
+		var idx = $(this).index();
+		
+		$(this).toggleClass('on').siblings().removeClass('on');
+	});
 	
 })
 
