@@ -43,7 +43,7 @@
 	<h1 class="hidden">고코투어</h1>
 	<!--리뉴얼 wrap 시작-->
 	<div class="rn-gwrap">
-		<div class="rnL-header clr bsLs">
+		<header class="rnL-header clr bsLs">
 			<div class="rn-container">
 				<div class="d-box clr">
 					<a class="logo-a" href="#"><img class="l-img" src="http://img.go.co.kr/logo.png" alt="고코투어"></a>
@@ -106,7 +106,7 @@
 					</div>
 					
 					<div class="dLink-box">
-						<a href="#">이벤트</a>
+						<a href="#">이벤트 <span class="i-new"></span></a>
 						<span class="mgl"></span>
 						<a href="#">숙소 추천받기</a>
 						<span class="mgl"></span>
@@ -122,7 +122,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</header>
 		
 		<!--백드롭, 달력 클릭시 뒤에 전체 배경-->
 		<div id="backDrop"></div>
@@ -362,7 +362,9 @@
 			</div>
 		</div>
 		
+		<!--전체 콘텐츠 영역-->
 		<div class="rn-contents">
+			<!--상품소개-->
 			<section class="rn-container sec-prd-basic">
 				<h2>[리조트] ★오션투유리조트 속초설악비치 호텔앤콘도 [총판]</h2>
 				
@@ -611,6 +613,7 @@
 					</div>
 				</div>
 			</section>
+			
 			<!--예약하기-->
 			<section class="sec-prd-buy">
 				<div class="rn-container prd-buy" id="prd-buy">
@@ -644,6 +647,7 @@
 				</div>
 			</section>
 			
+			<!--상품리스트-->
 			<section class="sec-prd-list">
 				
 				<div class="thead rn-container">
@@ -2076,6 +2080,7 @@
 					
 			</section>
 			
+			<!--상품 상세 설명-->
 			<section class="rn-container sec-prd-common">
 				<div class="area-prd-detail" id="area-prd-detail">
 					<ul class="ul-tab clr">
@@ -2088,8 +2093,174 @@
 					</ul>
 					
 					<ul class="ul-contents">
-						<li class="on">
-							
+						<li class="on li-intro">
+							<div class="d-row clr">
+								<div class="d-tit">기준인원 안내</div>
+								<div class="d-txt">
+									- 기준인원 초과시 추가요금 발생됩니다.(기준4/최대7인)<br>
+									- 1인 10,000원(8세 미만 무료)<br>
+									- 침구 추가시 1인세트 10,000원<br>
+									- 추가요금은 현장지불입니다.<br>
+									- 최대인원 초과시 입실 불가합니다.<br>
+									- 체크인시 인원확인 후 입실 가능합니다.
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">조식 이용인네</div>
+								<div class="d-txt">
+									토요일, 일요일, 월요일 및 공휴일 조식은 아메리칸식 뷔페로운영됩니다.<br>
+									- 소세지, 스크램블, 베이컨, 감자튀김, 샐러드, 시리얼 등 25여개의 메뉴로 제공됩니다.<br>
+									- 아메리칸식 뷔페 운영은 오션투유 1층 한식당 에서 운영됩니다.<br>
+									- 아메리칸식 뷔페 운영시간은 아침 7시 30분부터 10시 까지입니다.<br>
+									- 아메리칸식 뷔페 이용요금은 다음과 같습니다.<br>
+									ㄱ. 성인 1인 : 12,000원<br>
+									ㄴ. 소인 1인 :9,000원(36개월 이상 ~ 8세 미만)<br>
+									평일 조식은 단품 메뉴로 운영됩니다.<br>
+									- 메뉴 및 가격<br>
+									ㄱ. 광어미역국12,000원<br>
+									ㄴ. 우거지갈비탕8,000원<br>
+									ㄷ. 황태해장국8,000원<br>
+									- 평일조식은 한식당 에서 제공합니다.<br>
+									- 단품 메뉴는 조식이외에, 다연 운영시간내 언제든 이용가능합니다.<br>
+									- 다연 운영시간은 아침 7시 30분 부터 저녁 8시 까지입니다.(주말의 경우 저녁 9시 까지 운영)
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">바베큐장 이용안내</div>
+								<div class="d-txt">
+									- 리얼바베큐그릴이 구비된 200석 규모의 바베큐장을 운영하고 있습니다.<br>
+									- 바베큐장은 16시 부터 22시까지 운영합니다.<br>
+									- 4인기준 30,000원에 2시간 이용가능합니다.(추가인원 1인당 5,000원)<br>
+									- 바베큐장 예약시, 테이블+참숯+그릴+집게+가위 가 무료제공됩니다.<br>
+									- 음식은 제공하지 않으니, 직접준비하여 오시기 바랍니다.<br>
+									- 기상악화로 바베큐장을 운영하지 못하는경우에는 전액 환불해 드립니다.
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">배달서비스 이용안내</div>
+								<div class="d-txt">
+									- 계절 모듬회, 계절 모듬물회, 시카고리얼바베큐플레이츠를 리조트내 원하는 장소로 배달해 드립니다.<br>
+									- 모듬회는 대/중//소 사이즈로 선택이 가능합니다.<br>
+									  계절 모듬회(대) 70,000원 / 계절 모듬회(중) 50,000원 / 계절 모듬회(소) 30,000원<br>
+									- 계절 모듬물회는 1인에 10,000원으로 2인이상 주문가능합니다.<br>
+									  계절 물회(2인) 20,000원 /  계절 물회(3인) 30,000원 /  계절 물회(4인) 40,000원<br>
+									- 시카고리얼바베큐플레이츠 1쟁반 단위로 제공되며, 19,000원 입니다.
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">부대시설 안내</div>
+								<div class="d-txt">
+									- 오션투유 전동바이크 : 1인승, 2인승으로 구비되어 있으며, 1시간 단위로 이용이 가능합니다.<br>
+									  이용요금 : 1인승 1시간 15,000원1인승 2시간 26,000원2인승 1시간 20,000원2인승 2시간 30,000원<br>
+									- 라바짜 : 아메리카노 커피, 카푸치노 등 제공<br>
+									- 노래방 / 편의점 : 24:00시까지 운영
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">인사말</div>
+								<div class="d-txt">
+									- 설악/속초/고성 위치! 삼포해수욕장 바로 앞 오션투유리조트<br>
+									- 설악/속초/고성 아우르는 최고의 리조트!<br>
+									- 에메랄드 빛 삼포해변 1분거리!<br>
+									- 얕은 수심, 어린아이 위한 해수욕장!<br>
+									- 해변에서 조개잡이 가능 (조개잡이 물품 대여가능) <br>
+									- 속초, 설악 모든 해변과 근접! <br>
+									- 최대80%할인 , 특가할인
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">단체 문의</div>
+								<div class="d-txt">
+									오션투유콘도는 최대 1800명 까지 수용 가능한 대형콘도입니다.<br>
+									기업체/단체교육/워크샵/수학여행/수련회/세미나/ 워크샵/가족모임/행사/MICE(마이스)/설명회/연회장<br>
+									컨벤션/학회/기업행사/디너쇼/전시회/컨퍼런스/비지니스미팅/소규모모임/대규모모임
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">견적문의</div>
+								<div class="d-txt">
+									단체 상담 및 견적문의 (예약실 : 1666-5683)
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">패키지 및 테마안내</div>
+								<div class="d-txt">
+									[해수욕장숙소]삼포해수욕장 인근<br>
+									[바다전망]동해바다 전망객실 보유
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">부대시설</div>
+								<div class="d-txt">
+									<ul class="facil-pict clr">
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon13.png" alt="조식" class="pictImg">
+											<p>조식</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon9.png" alt="주차" class="pictImg">
+											<p>주차장</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon8.png" alt="식당" class="pictImg">
+											<p>식당</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon12.png" alt="BBQ" class="pictImg">
+											<p>공용 BBQ</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon5.png" alt="편의점" class="pictImg">
+											<p>편의점</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon15.png" alt="WIFI" class="pictImg">
+											<p>와이파이</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon6.png" alt="카페" class="pictImg">
+											<p>카페</p>
+										</li>
+										<li>
+											<img src="http://img.go.co.kr/establishment_icon7.png" alt="레스토랑" class="pictImg">
+											<p>레스토랑</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">추천여행지</div>
+								<div class="d-txt">
+									삼포해수욕장: 오션투유리조트로 앞으로 펼쳐지는 해수욕장은 푸른 동해에서도 가장 깨끗한 해수욕장 중 하나로 꼽힙니다.<br>
+									잘 갖춰진 편의 시설과 깔끔한 민박단지로 구성되어 있습니다. 조개체험 가능합니다. 
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">군부대</div>
+								<div class="d-txt">
+									<p class="p-elli">
+										22사단예하부대, 22사단, 율곡부대, 뇌종부대, 고성종합체육관, 22사단53연대, 22사단55연대, 22사단56연대, 22사단정비<br>
+										대대, 22사단수색대대, 22사단53연대수색중대, 22사단55연대수색중대, 22사단56연대수색중대,22사단포병연대, 22사단<br>
+										53연대 본부중대, 22사단55연대본부중대, 22사단56연대본부중대, 22사단신교대대, 22사단신병교육대, 22사단훈련소
+									</p>
+									<p class="fold-txt">
+										율곡신병교육대, 22보병사단, 강원도고성22사단, 육군22사단, 22보병사단,
+										강원도고성율곡부대, 강원도고성뇌종부대, 고성22사단, 고성율곡부대, 고성뇌종부대,율곡한울부대, 공병대, 
+										수색대, 화확대, 보수대, 의무대, 헌병대, 기무대, 수송대, 공병대대, 수색대대, 화확대대, 보수대대,의무대대,
+										헌병대대, 기무대대, 수송대대, 56연대1대대, 56연대2대대, 56연대3대대, 율곡청룡, 율곡천마, 율곡불곰, 
+										278포병대대,279포병대대, 280포병대대, 639포병대대, 율곡십자성대대, 율곡승리대대, 율곡왕포대대,
+										율곡쌍호, 율곡백호, 율곡비호, 율곡맹호, 55연대1대대, 55연대2대대, 55연대3대대, 연대본부, 쌍호수색중대,통신대대
+									</p>
+									<a href="javascript:;" class="a-btn" onclick="$(this).parent().find('.fold-txt').slideToggle('fast');">더보기</a>
+								</div>
+							</div>
+							<div class="d-row clr">
+								<div class="d-tit">추천여행지</div>
+								<div class="d-txt">
+									삼포해수욕장: 오션투유리조트로 앞으로 펼쳐지는 해수욕장은 푸른 동해에서도 가장 깨끗한 해수욕장 중 하나로 꼽힙니다.<br>
+									잘 갖춰진 편의 시설과 깔끔한 민박단지로 구성되어 있습니다. 조개체험 가능합니다. 
+								</div>
+							</div>
 						</li>
 						<li></li>
 						<li></li>
@@ -2097,144 +2268,197 @@
 						<li></li>
 						<li></li>
 					</ul>
-					<div class="clr">
-						<div class="d-tit">기준인원 안내</div>
-						<div class="d-txt">
-							- 기준인원 초과시 추가요금 발생됩니다.(기준4/최대7인)<br>
-							- 1인 10,000원(8세 미만 무료)<br>
-							- 침구 추가시 1인세트 10,000원<br>
-							- 추가요금은 현장지불입니다.<br>
-							- 최대인원 초과시 입실 불가합니다.<br>
-							- 체크인시 인원확인 후 입실 가능합니다.
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">조식 이용인네</div>
-						<div class="d-txt">
-							토요일, 일요일, 월요일 및 공휴일 조식은 아메리칸식 뷔페로운영됩니다.<br>
-							- 소세지, 스크램블, 베이컨, 감자튀김, 샐러드, 시리얼 등 25여개의 메뉴로 제공됩니다.<br>
-							- 아메리칸식 뷔페 운영은 오션투유 1층 한식당 에서 운영됩니다.<br>
-							- 아메리칸식 뷔페 운영시간은 아침 7시 30분부터 10시 까지입니다.<br>
-							- 아메리칸식 뷔페 이용요금은 다음과 같습니다.<br>
-							ㄱ. 성인 1인 : 12,000원<br>
-							ㄴ. 소인 1인 :9,000원(36개월 이상 ~ 8세 미만)<br>
-							평일 조식은 단품 메뉴로 운영됩니다.<br>
-							- 메뉴 및 가격<br>
-							ㄱ. 광어미역국12,000원<br>
-							ㄴ. 우거지갈비탕8,000원<br>
-							ㄷ. 황태해장국8,000원<br>
-							- 평일조식은 한식당 에서 제공합니다.<br>
-							- 단품 메뉴는 조식이외에, 다연 운영시간내 언제든 이용가능합니다.<br>
-							- 다연 운영시간은 아침 7시 30분 부터 저녁 8시 까지입니다.(주말의 경우 저녁 9시 까지 운영)
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">바베큐장 이용안내</div>
-						<div class="d-txt">
-							- 리얼바베큐그릴이 구비된 200석 규모의 바베큐장을 운영하고 있습니다.<br>
-							- 바베큐장은 16시 부터 22시까지 운영합니다.<br>
-							- 4인기준 30,000원에 2시간 이용가능합니다.(추가인원 1인당 5,000원)<br>
-							- 바베큐장 예약시, 테이블+참숯+그릴+집게+가위 가 무료제공됩니다.<br>
-							- 음식은 제공하지 않으니, 직접준비하여 오시기 바랍니다.<br>
-							- 기상악화로 바베큐장을 운영하지 못하는경우에는 전액 환불해 드립니다.
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">배달서비스 이용안내</div>
-						<div class="d-txt">
-							- 계절 모듬회, 계절 모듬물회, 시카고리얼바베큐플레이츠를 리조트내 원하는 장소로 배달해 드립니다.<br>
-							- 모듬회는 대/중//소 사이즈로 선택이 가능합니다.<br>
-							  계절 모듬회(대) 70,000원 / 계절 모듬회(중) 50,000원 / 계절 모듬회(소) 30,000원<br>
-							- 계절 모듬물회는 1인에 10,000원으로 2인이상 주문가능합니다.<br>
-							  계절 물회(2인) 20,000원 /  계절 물회(3인) 30,000원 /  계절 물회(4인) 40,000원<br>
-							- 시카고리얼바베큐플레이츠 1쟁반 단위로 제공되며, 19,000원 입니다.
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">부대시설 안내</div>
-						<div class="d-txt">
-							- 오션투유 전동바이크 : 1인승, 2인승으로 구비되어 있으며, 1시간 단위로 이용이 가능합니다.<br>
-							  이용요금 : 1인승 1시간 15,000원1인승 2시간 26,000원2인승 1시간 20,000원2인승 2시간 30,000원<br>
-							- 라바짜 : 아메리카노 커피, 카푸치노 등 제공<br>
-							- 노래방 / 편의점 : 24:00시까지 운영
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">인사말</div>
-						<div class="d-txt">
-							- 설악/속초/고성 위치! 삼포해수욕장 바로 앞 오션투유리조트<br>
-							- 설악/속초/고성 아우르는 최고의 리조트!<br>
-							- 에메랄드 빛 삼포해변 1분거리!<br>
-							- 얕은 수심, 어린아이 위한 해수욕장!<br>
-							- 해변에서 조개잡이 가능 (조개잡이 물품 대여가능) <br>
-							- 속초, 설악 모든 해변과 근접! <br>
-							- 최대80%할인 , 특가할인
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">단체 문의</div>
-						<div class="d-txt">
-							오션투유콘도는 최대 1800명 까지 수용 가능한 대형콘도입니다.<br>
-							기업체/단체교육/워크샵/수학여행/수련회/세미나/ 워크샵/가족모임/행사/MICE(마이스)/설명회/연회장<br>
-							컨벤션/학회/기업행사/디너쇼/전시회/컨퍼런스/비지니스미팅/소규모모임/대규모모임
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">견적문의</div>
-						<div class="d-txt">
-							단체 상담 및 견적문의 (예약실 : 1666-5683)
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">패키지 및 테마안내</div>
-						<div class="d-txt">
-							[해수욕장숙소]삼포해수욕장 인근<br>
-							[바다전망]동해바다 전망객실 보유
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">부대시설</div>
-						<div class="d-txt">
-							
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">추천여행지</div>
-						<div class="d-txt">
-							삼포해수욕장: 오션투유리조트로 앞으로 펼쳐지는 해수욕장은 푸른 동해에서도 가장 깨끗한 해수욕장 중 하나로 꼽힙니다. 
-							잘 갖춰진 편의 시설과 깔끔한 민박단지로 구성되어 있습니다. 조개체험 가능합니다. 
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">군부대</div>
-						<div class="d-txt">
-							<p class="p-elli">
-								22사단예하부대, 22사단, 율곡부대, 뇌종부대, 고성종합체육관, 22사단53연대, 22사단55연대, 22사단56연대, 22사단정비<br>
-								대대, 22사단수색대대, 22사단53연대수색중대, 22사단55연대수색중대, 22사단56연대수색중대,22사단포병연대, 22사단<br>
-								53연대 본부중대, 22사단55연대본부중대, 22사단56연대본부중대, 22사단신교대대, 22사단신병교육대, 22사단훈련소
-							</p>
-							<a href="javascript:;" class="a-btn">▼ 더보기</a>
-						</div>
-					</div>
-					<div class="clr">
-						<div class="d-tit">추천여행지</div>
-						<div class="d-txt">
-							삼포해수욕장: 오션투유리조트로 앞으로 펼쳐지는 해수욕장은 푸른 동해에서도 가장 깨끗한 해수욕장 중 하나로 꼽힙니다.<br>
-							잘 갖춰진 편의 시설과 깔끔한 민박단지로 구성되어 있습니다. 조개체험 가능합니다. 
-						</div>
-					</div>
 				</div>
 			</section>
+
 			<!--주변 다른 숙소-->
 			<section class="sec-prd-around">
 				<div class="prd-around">
+					<h2>[<strong>오션투유 리조트</strong>] 주변 다른 숙소도 보시겠어요?</h2>
 					
+					<ul class="ul-list clr">
+						<li class="li-item">
+							<a href="">
+								<figure><img src="http://cache.go.co.kr/media/375/file.go.co.kr/tour/img3/1476348760_main1.jpg" alt="현대수콘도미니엄"></figure>
+								<div class="d-txt">
+									<p class="p-name">현대수콘도미니엄</p>
+									<p class="p-pric"><span class="f-bd">52,000</span>원</p>
+								</div>
+							</a>
+						</li>
+						<li class="li-item">
+							<a href="">
+								<figure><img src="http://cache.go.co.kr/media/375/file.go.co.kr/tour/img3/1498529278_main1.jpg" alt="낙산비치호텔"></figure>
+								<div class="d-txt">
+									<p class="p-name">낙산비치호텔</p>
+									<p class="p-pric"><span class="f-bd">77,000</span>원</p>
+								</div>
+							</a>
+						</li>
+						<li class="li-item">
+							<a href="">
+								<figure><img src="http://cache.go.co.kr/media/375/file.go.co.kr/tour/img3/1503900859_main1.jpg" alt="동강시스타리조트"></figure>
+								<div class="d-txt">
+									<p class="p-name">동강시스타리조트</p>
+									<p class="p-pric"><span class="f-bd">84,900</span>원</p>
+								</div>
+							</a>
+						</li>
+						<li class="li-item">
+							<a href="">
+								<figure><img src="http://cache.go.co.kr/media/375/file.go.co.kr/tour/img3/1488170837_main1.jpg" alt="강릉관광호텔"></figure>
+								<div class="d-txt">
+									<p class="p-name">강릉관광호텔</p>
+									<p class="p-pric"><span class="f-bd">80,000</span>원</p>
+								</div>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</div>
 		
 		
-		
+		<footer id="Footer" class="clr ftfm-mg">
+			<div class="f-area">
+				<div class="f-top">
+					<div class="policy">
+						<a href="javascript:utils.pop_open('http://www.go.co.kr/home/policy/join_policy_pop.php', 'join_policy', '')" title="이용약관">이용약관</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+						<a href="javascript:utils.pop_open('http://www.go.co.kr/home/policy/privacy_pop.php', 'privacy_policy', '')" title="개인정보처리방침"><b><font color="white">개인정보처리방침</font></b></a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+						<a href="http://www.go.co.kr/home/brd/?dd=QxsoVg==" title="광고/입점/제휴문의">광고/입점/제휴문의</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+						<a href="http://www.go.co.kr/home/customer/" title="고객센터">고객센터</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+						<a href="javascript:utils.on('#mailing_pop_wrap')"><img src="http://img.go.co.kr/icon_mail.jpg" alt="메일"> <span class="mail">매주 최저가/특가 상품 소식받기!</span></a>
+					</div>
+					<div class="family-site">
+						<span>패밀리사이트 바로가기&nbsp;▲</span>
+						<ul class="site">
+							<li>
+								<div class="fam_btn"><a href="http://www.go.co.kr" target="_blank">고코투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.tournspa.co.kr" target="_blank">투어앤스파</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.tourgosu.co.kr" target="_blank">투어고수</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.todaygo.co.kr" target="_blank">투데이고</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.allgotour.co.kr" target="_blank">올고투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.todotour.co.kr" target="_blank">투두투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.toursoon.co.kr" target="_blank">투어순</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.hyutour.co.kr" target="_blank">휴투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.didimtour.co.kr" target="_blank">디딤투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.trip25.co.kr" target="_blank">트립25</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.oudigo.co.kr" target="_blank">어디고</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.borogogo.co.kr" target="_blank">바로고고</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.watour.co.kr" target="_blank">와투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.tourgirl.co.kr" target="_blank">투어걸</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.sinnatour.co.kr" target="_blank">신나투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.mitour.co.kr" target="_blank">미투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.dagaja.co.kr" target="_blank">다가자</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.tripgogo.co.kr" target="_blank">고고트립</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.hotplan.co.kr" target="_blank">핫플랜</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.gleetour.co.kr" target="_blank">글리투어</a></div>
+							</li>
+							<li>
+								<div class="fam_btn"><a href="http://www.shinetour.co.kr" target="_blank">샤인투어</a></div>
+							</li>
+							<!-- 사장님 요청으로 이비즈네트웍스 추가 170504 -->
+							<li>
+								<div class="fam_btn"><a href="http://www.ebiznetworks.co.kr" target="_blank">이비즈네트웍스</a></div>
+							</li>
+						</ul>
+					</div>
+					<!-- 2017-03-30 -->
+					<script type="text/javascript">
+						$('.family-site > span').click(function() {
+							$(this).next().toggle();
+						});
+					</script>
+					<!-- // 2017-03-30 -->
+				</div>
+
+				<div class="f-bottom">
+					<!--이미지 변경-->
+					<div class="f_logo"><img src="http://img.go.co.kr/f_logo.png" alt="고코투어푸터로고"></div>
+					<div class="address">
+						<!--내용 수정-->
+						<p>
+							(주)바로네트웍스<span class="mgl"></span>대표이사 : 전병권<span class="mgl"></span>메인문의 : help@go.co.kr<br>
+							주소 : 서울특별시 강남구 테헤란로82길 15, 3층(대치동, 디아이타워)<br>
+							사업자등록번호 : 215-87-85373<span class="mgl"></span>통신판매업 : 제2017-서울강남-00561호<span class="mgl"></span>여행업등록번호 : 제2017-07호<br>
+							여행영업보증서 : 국내여행 제100-000-2015 0144 5816호<span class="mgl"></span>국외여행업등록번호 : 제2017호-26호
+						</p>
+						<p class="copy">
+							copyright 2015 by GO.CO.KR co., all rights reserved.
+						</p>
+
+						<p class="store">
+							<a href="http://www.go.co.kr/_appclick.php?val=ios" target="_blank"><img src="http://img.go.co.kr/appstore.png" arc="앱스토어바로가기"></a>
+							<a href="http://www.go.co.kr/_appclick.php?val=android" target="_blank"><img src="http://img.go.co.kr/googleplay.png" arc="구글스토어바로가기"></a>
+						</p>
+
+					</div>
+					<div class="customer">
+						<p class="clr">
+							고객센터<br>
+							1666-1243 <span class="fl-r">(09:30 ~ 18:00)</span><br>
+							주말/공휴일 <span class="fl-r">(09:30 ~ 17:00)</span>
+						</p>
+					</div>
+
+					<!--이미지 경로 변경-->
+					<div class="four-list">
+						<img src="http://img.go.co.kr/f_icon_01.jpg" border="0" alt="랭키닷컴1위">
+						<a href="javascript:util.regist_pop('registration02')"><img src="http://img.go.co.kr/f_icon_02.jpg" border="0" alt="관광업등록증"></a>
+						<a href="javascript:util.regist_pop('registration01')"><img src="http://img.go.co.kr/f_icon_03.jpg" border="0" alt="서울보증보험"></a>
+						<img src="http://img.go.co.kr/f_icon_04.jpg" border="0" alt="신용카드결제">
+						<img src="http://img.go.co.kr/f_icon_05.jpg" border="0" alt="휴대폰결제">
+						<script language="JavaScript">
+							function onopen() {
+								var site_com = "2158785373";
+								var url = "http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=" + site_com;
+								window.open(url, "communicationViewPopup", "width=750, height=700;");
+							}
+						</script>
+						<img src="http://img.go.co.kr/f_icon_06.jpg" alt="공정거래위원회" onclick="onopen();" style="cursor:pointer">
+					</div>
+
+				</div>
+			</div>
+		</footer>
 
 	</div>
 

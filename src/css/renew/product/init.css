@@ -1,5 +1,4 @@
 @charset 'utf-8';
-body {height: 2000px;}
 .rn-gwrap {min-width: 1430px;}
 
 .prd-basic .bx-wrapper .bx-caption {}
@@ -149,7 +148,8 @@ body {height: 2000px;}
 .sec-prd-list .tr > li.nth-2 {width: 224px;}
 .sec-prd-list .tr > li.nth-3 {width: 266px;}
 .sec-prd-list .tr > li.nth-4 {width: 250px;}
-.sec-prd-list .tbody {position: relative; margin-bottom: 20px;}
+
+.sec-prd-list .tbody {position: relative;}
 .sec-prd-list .tbody > .d-item > .tr {width: 1100px; margin: 0 auto; height: 64px; border-bottom: 1px solid #ddd;}
 .sec-prd-list .tbody > .d-item > .tr > li {position: relative; top: 11px; background: transparent;}
 .sec-prd-list .tbody > .d-item > .tr > li:first-child {text-indent: 18px; z-index: 1;}
@@ -384,15 +384,40 @@ body {height: 2000px;}
 
 
 /* 상품 상세안내 탭 */
-.area-prd-detail {}
+.sec-prd-common {margin-top: 30px;}
+.sec-prd-common .area-prd-detail {}
 .area-prd-detail .ul-tab {position: relative; border-bottom: 1px solid #888a89}
 .area-prd-detail .ul-tab > li {position: relative; float: left; width: 184.33px; border: 1px solid #e8e8e8; border-bottom: 0; margin-left: -1px;}
 .area-prd-detail .ul-tab > li.on {border: 1px solid #888a89; border-bottom: 0; z-index: 1;}
 .area-prd-detail .ul-tab > li > a {display: block; height: 60px; text-align: center; padding-top: 19px; font-size: 17px; background: #f8f8fa; color: #737373;}
 .area-prd-detail .ul-tab > li.on > a {background: #fff; color: #343535;}
 .area-prd-detail .ul-contents {position: relative;}
-.area-prd-detail .ul-contents > li {position: relative; border-top: 1px solid #dddddd; padding: 35px 0px;}
-.area-prd-detail .ul-contents > li:first-child {border: 0;}
-.area-prd-detail .ul-contents > li > div {position: relative; float: left;}
-.area-prd-detail .ul-contents .d-tit {width: 240px; font-weight: 700; padding-left: 20px; font-size: 17px;}
-.area-prd-detail .ul-contents .d-txt {width: 860px; line-height: 2;}
+.area-prd-detail .ul-contents > li {display: none;}
+.area-prd-detail .ul-contents > li.on {display: block;}
+.area-prd-detail .ul-contents .li-intro {}
+.area-prd-detail .ul-contents .li-intro .d-row {position: relative; position: relative; border-top: 1px solid #dddddd; padding: 35px 0px;}
+.area-prd-detail .ul-contents .li-intro .d-row:first-child {border: 0;}
+.area-prd-detail .ul-contents .li-intro .d-row > div {float: left;}
+.area-prd-detail .ul-contents .li-intro .d-tit {width: 240px; font-weight: 700; padding-left: 20px; font-size: 17px;}
+.area-prd-detail .ul-contents .li-intro .d-txt {width: 860px; line-height: 2;}
+.area-prd-detail .ul-contents .li-intro .d-txt .p-elli {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.area-prd-detail .ul-contents .li-intro .d-txt .fold-txt {display: none;}
+.area-prd-detail .ul-contents .li-intro .d-txt .a-btn {position: relative; display: inline-block; color: #59a2ec; border: 1px solid #5ca3ec; line-height: 1.5; font-size: 13px; padding: 0 5px;}
+.area-prd-detail .ul-contents .li-intro .d-txt .a-btn:before {content: "▼"; position: relative; top: -1px; font-size: 11px; margin-right: 3px;}
+.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict {position: relative;}
+.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li {float: left; text-align: center; margin-left: 10px;}
+.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li:first-child {margin-left: -14px;}
+
+/* 주변 다른 숙소 */
+.sec-prd-around {padding: 30px 0; background: #f1f2f7;}
+.prd-around {position: relative; width: 1010px; margin: 0 auto; letter-spacing: 0;}
+.prd-around .li-item {position: relative; float: left; width: 238px; margin-left: 19px;}
+.prd-around .li-item:first-child {margin-left: 0;}
+.prd-around .li-item > a {display: block; width: 100%;}
+.prd-around h2 {font-size: 18px; font-weight: 700;}
+.prd-around h2 strong {color: #3e4c63;}
+.prd-around .ul-list {margin-top: 16px;}
+.prd-around .li-item figure img {width: 238px; height: 180px;}
+.prd-around .li-item .d-txt {font-weight: 700;}
+.prd-around .li-item .d-txt .p-name {margin-top: 16px;}
+.prd-around .li-item .d-txt .p-pric .f-bd {font-weight: 800;}
