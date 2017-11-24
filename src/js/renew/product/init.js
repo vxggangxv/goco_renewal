@@ -48,7 +48,27 @@ $(function() {
 	// 날짜확인, 객실확인 클릭시 스크롤 이동
 	$("#prd-buy .btn-chk").on('click', function() {
 		var scrTop = $("#prd-buy").offset().top;
-		$("html, body").stop().animate({scrollTop: scrTop},200);
+		$("html, body").stop().animate({scrollTop: 699},200);
+	});
+	
+	// 스크롤 이동시 날짜확인, 하단 픽스
+	$(window).scroll(function() {
+		var scr = $(window).scrollTop();
+		
+		//console.log(scr);
+		if (scr == 700) {
+			$("#sec-prd-buy").hide();
+		}
+		if (scr >= 700) {
+			$("#sec-prd-buy").fadeIn('fast');
+			$("#sec-prd-buy").addClass('affix');
+			$("#sec-prd-list").css("margin-top", "90px");
+		} else {
+			$("#sec-prd-buy").removeClass('affix');
+			$("#sec-prd-list").css("margin-top", "0px");
+		}
+		
+		
 	});
 	
 	// APP 예약 클릭 시
@@ -65,7 +85,7 @@ $(function() {
 	});
 	
 	// STEP3 패키지 이용안내 설명 높이 조절
-	$.each($("#part-con .pkg-con .con-1"), function() {
+	$.each($("div[id^=part-con] .pkg-con .con-1"), function() {
 		var c2_ht = $(this).height() + 1;
 		$(this).next().height(c2_ht);
 	});
@@ -85,7 +105,7 @@ $(function() {
 		
 		// 클릭 시 스크롤 이동
 		var scrTg = $(this).closest('.d-item').find('.tr').offset().top - 64;
-		console.log(scrTg);
+		//console.log(scrTg);
 		$(window).scrollTop(scrTg);
 		
 	});
@@ -123,7 +143,27 @@ $(function() {
 	$("#area-prd-detail .ul-tab > li").on("click", function() {
 		var idx = $(this).index();
 		
+		$(this).addClass('on').siblings().removeClass('on');
+		$("#area-prd-detail .ul-contents > li").eq(idx).addClass('on').siblings().removeClass('on');
+	});
+	
+	// 이용후기
+	$("#t-review .tr-tit").on("click", function() {
+		var idx = $(this).index();
+		var idx2 = $(this).index() + 1;
+		
 		$(this).toggleClass('on').siblings().removeClass('on');
+		$("#t-review .tr-cont").hide();
+		if ( $(this).hasClass('on') ) {
+			$(this).next().show();
+		} else {
+			$(this).next().hide();
+		}
+	});
+	
+	// 페이지네이션
+	$("div[id^=pagenation] a").on('click', function() {
+		$(this).addClass('on').siblings().removeClass('on');
 	});
 	
 })

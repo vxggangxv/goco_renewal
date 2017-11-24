@@ -60,6 +60,9 @@ input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dot
 .c-ic3.sha-cmm.i-faceb {background-position: -60px -120px;}
 .c-ic3.sha-cmm.i-email {background-position: -120px -120px;}
 .c-ic3.sha-cmm.i-sms {background-position: -180px -120px;}
+.c-ic3.i-pen {width: 17px; height: 15px; background-position: -180px -90px;}
+.c-ic3.i-thumb {width: 43px; height: 47px; background-position: 0px -180px;}
+.c-ic3.i-spot {width: 11px; height: 14px; background-position: 0px -30px;}
 
 
 .i-new {position: relative; top: -2px; display: inline-block; font-size: 10px; text-align: center; vertical-align: middle; box-sizing: border-box; border-radius: 50%; width: 15px; height: 15px; background: #eb0045; border: 1px solid #e12130; color: #fff; font-family: "Arial", sans-serif; line-height: 13px; font-weight: 400;}
@@ -69,6 +72,7 @@ input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dot
 
 /* 테마컬러 */
 .thColor1 {color: #fa6b0a;}
+.thColor1-2 {color: #ff6700;}
 
 
 /* 공통 css */
@@ -76,6 +80,8 @@ input,select,option,textarea {font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dot
 .mgl, .mg- {display: inline-block; vertical-align: middle; position: relative;}
 .ftfm-nt, .ftfm-nt * {font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif;}
 .ftfm-mg, .ftfm-mg * {font-family: "Malgun Gothic", "Noto Sans KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif; letter-spacing: -1px;}
+.f-bd {font-weight: 700;}
+.f-bdr {font-weight: 800;}
 .s-i-Arr {position: relative; display: inline-block; width: 6px; height: 6px; border: 1px solid #d7d7d7;
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
@@ -182,7 +188,7 @@ div.pp_default .pp_description {position: relative; top: 4px;}
 .rnL-header .flr-box .rnL-nv > li > a.lgn {border: 1px solid #595959; padding: 2px 4px;}
 
 /* 푸터영역 */
-#Footer {background-color:#292929; padding-bottom:50px;}
+#Footer {background-color:#292929; padding-bottom:100px;}
 .f-area {position: relative; width:1190px; margin:0 auto;}
 .f-area .f-top {position: relative; padding:20px 0;}
 .f-area .f-top:after {content:''; display:block; clear:both;}

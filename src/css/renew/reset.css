@@ -74,7 +74,7 @@ button[type=button] {cursor: pointer;}
 /* font-bold */
 .f-bd {font-weight: 700;}
 /* dropDown-bg */
-.dropDown-bg {position: fixed; z-index: 11; top: 0; left: 0; width: 100%; height: 100%; background: url(http://img.go.co.kr/black_rgba58.png) repeat;}
+.dropDown-bg {position: fixed; z-index: 11; top: 0; left: 0; width: 100%; height: 100%; background: url(http://img.go.co.kr/black_rgba90.png) repeat;}
 
 .appe-reset {
 	-webkit-appearance: none;
@@ -103,7 +103,7 @@ button[type=button] {cursor: pointer;}
 }
 
 /* rArrow, lArrow 버튼 */
-.ic-lArrow:after, .ic-rArrow:after {
+.ic-lArrow:after, .ic-rArrow:after, .ic-bArrow:after {
 	position: relative; top: -2px;
     content: ""; display: inline-block; width: 7px; height: 7px; border: 1px solid #898989;
     -webkit-transform: rotate(-45deg); 
@@ -116,10 +116,38 @@ button[type=button] {cursor: pointer;}
     left: 2px;
 }
 .ic-rArrow:after {
-    right: 2px;
     border-top: 0; border-left: 0;
-    -webkit-transform: rotate(-45deg); 
-    -ms-transform: rotate(-45deg); 
-    -o-transform: rotate(-45deg); 
-    transform: rotate(-45deg); 
+    right: 2px;
 }
+.ic-bArrow:after {
+    border-top: 0; border-right: 0;
+    top: 2px; width: 8px; height: 8px;
+}
+.ie8 .ic-lArrow:after, .ie8 .ic-rArrow:after {
+	width: auto; height: auto; 
+	border: 0; left: 0; right: 0;
+}
+.ie8 .ic-lArrow:after {content: "◀";}
+.ie8 .ic-rArrow:after {content: "▶";}
+.ie8 .ic-bArrow:after {content: "▼";}
+
+.i-borL-tran, .i-borT-tran {position: relative;}
+.i-borL-tran:before, .i-borL-tran:after, .i-borT-tran:before, .i-borT-tran:after{
+	position: absolute; content: ""; border: 4px solid transparent; 
+}
+
+.i-borT-tran:before .i-borT-tran:after {
+	border-bottom: 8px solid #233549;  top: -13px; left: 18px;
+}
+.i-borT-tran:after {
+	top: -12px;	
+}
+
+.i-borL-tran:before, .i-borL-tran:after {
+	border-right-color: #d2d2d2; bottom: 6px; left: -9px;
+}
+.i-borL-tran:after {
+	border-right-color: #fff; left: -8px;
+}
+.ie8 .i-borL-tran, .ie8 .i-borT-tran {display: none;}
+

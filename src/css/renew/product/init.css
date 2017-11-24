@@ -44,7 +44,7 @@
 .prd-basic .prd-infoBox .d1 .pop-layer .a-x {position: absolute; top: 3px; right: 2px;}
 .prd-basic .prd-infoBox .d1 .pop-layer .a-x:before, .prd-basic .prd-infoBox .d1 .pop-layer .a-x:after {background: #999999; height: 15px; left: 8px; top: 2px;}
 .prd-basic .prd-infoBox .d1 .pop-layer:before, .prd-basic .prd-infoBox .d1 .pop-layer:after {content: ""; border: 4px solid transparent; border-bottom: 8px solid #233549; position: absolute; top: -13px; left: 18px;}
-.prd-basic .prd-infoBox .d1 .pop-layer:after {content: ""; border-bottom-color: #fff; top: -12px; left: 18px;}
+.prd-basic .prd-infoBox .d1 .pop-layer:after {content: ""; border-bottom-color: #fff; top: -12px;}
 
 
 .prd-basic .prd-infoBox .d-date {position: relative; padding: 10px 50px; background: #f1f2f7; border-top: 1px solid #b8b8ba; border-bottom: 1px solid #b8b8ba; font-weight: 700; margin-top: 9px; z-index: 6;}
@@ -77,8 +77,11 @@
 
 
 
-.sec-prd-buy {margin-top: 38px; height: 90px; background: #70707d;}
-.prd-buy {}
+.sec-prd-buy {position: relative; width: 100%; margin-top: 38px; height: 90px; background: #70707d;}
+.sec-prd-buy {}
+.sec-prd-buy.affix {position: fixed; bottom: -1px; z-index: 10;}
+
+.prd-buy {width: 1100px; position: relative; height: 100%;}
 .prd-buy .ul1 {position: relative; top: 16px;}
 .prd-buy .ul1 > li {float: left; position: relative; color: #e0e0e0;}
 .prd-buy .ul1 > li, .prd-buy .ul1 > li * {letter-spacing: -0.5px;}
@@ -95,9 +98,10 @@
 .prd-buy .ul1 .li3 {float: right;}
 .prd-buy .ul1 .li3 .s-box {position: relative; top: 20px; margin-right: 10px;}
 .prd-buy .ul1 .li3 .s-box span {position: relative; display: inline-block; color: #fff; font-weight: 700;}
+.prd-buy .ul1 .li3 .s-box s {display: inline-block;}
 .prd-buy .ul1 .li3 .s-per {position: relative; top: 1px; font-size: 17px;}
 .prd-buy .ul1 .li3 .s-per:after {content: "%"; font-size: 15px;}
-.prd-buy .ul1 .li3 .s-pric {position: relative; top: 3px; font-size: 30px; margin-left: 10px; letter-spacing: -1px;}
+.prd-buy .ul1 .li3 .s-pric {position: relative; top: 3px; font-size: 30px; margin-left: 6px; letter-spacing: -1px;}
 .prd-buy .ul1 .li3 .s-pric:after {content: "원"; font-size: 18px; font-weight: 400; position: relative; top: -3px; margin-left: 3px;}
 .prd-buy .ul1 .li3 .btn-b {position: relative; width: 156px; height: 59px; font-size: 18px; color: #fff; background: #e81c2f; font-weight: 700; border: 0; padding-bottom: 3px;}
 .prd-buy .ul1 .li3 .btn-b:before {content: ""; width: 15px; height: 7px; border: 2px solid #fff; display: inline-block; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); border-top: 0; border-right: 0; position: relative; top: -3px; margin-right: 10px;}
@@ -298,7 +302,7 @@
 
 .area-trd-comp .trd-comp-2 {}
 .trd-comp-2 {width: 712px; min-height: 300px; background: #fff; border: 1px solid #e6e6e6; margin-left: 6px; padding-bottom: 52px;}
-
+/*.ie8 .trd-comp-2 {}*/
 .trd-comp-2 .c-red {font-size: 16px; color: #ff4748;}
 
 .trd-comp-2 input[type="checkbox"] {appearance: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none;
@@ -386,14 +390,16 @@
 /* 상품 상세안내 탭 */
 .sec-prd-common {margin-top: 30px;}
 .sec-prd-common .area-prd-detail {}
-.area-prd-detail .ul-tab {position: relative; border-bottom: 1px solid #888a89}
+.area-prd-detail .ul-tab {border-bottom: 1px solid #888a89}
 .area-prd-detail .ul-tab > li {position: relative; float: left; width: 184.33px; border: 1px solid #e8e8e8; border-bottom: 0; margin-left: -1px;}
 .area-prd-detail .ul-tab > li.on {border: 1px solid #888a89; border-bottom: 0; z-index: 1;}
 .area-prd-detail .ul-tab > li > a {display: block; height: 60px; text-align: center; padding-top: 19px; font-size: 17px; background: #f8f8fa; color: #737373;}
 .area-prd-detail .ul-tab > li.on > a {background: #fff; color: #343535;}
-.area-prd-detail .ul-contents {position: relative;}
-.area-prd-detail .ul-contents > li {display: none;}
+.area-prd-detail .ul-contents {}
+.area-prd-detail .ul-contents > li {display: none; position: relative;}
 .area-prd-detail .ul-contents > li.on {display: block;}
+
+/* 상품소개 */
 .area-prd-detail .ul-contents .li-intro {}
 .area-prd-detail .ul-contents .li-intro .d-row {position: relative; position: relative; border-top: 1px solid #dddddd; padding: 35px 0px;}
 .area-prd-detail .ul-contents .li-intro .d-row:first-child {border: 0;}
@@ -408,8 +414,167 @@
 .area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li {float: left; text-align: center; margin-left: 10px;}
 .area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li:first-child {margin-left: -14px;}
 
+/* 이용후기 */
+.li-review {margin-top: 25px;}
+.li-review .d-tit {border: 1px solid #c6c6c6; border-bottom: 0;}
+.li-review .d-tit > div {float: left; height: 200px; padding-top: 25px;}
+.li-review .d-tit .d-l {width: 299px; padding-left: 25px;}
+.li-review .d-tit .d-l h3 {font-size: 16px; font-weight: 700;}
+.li-review .d-tit .d-l h3 .s-star {font-size: 0; position: relative; top: 3px; vertical-align: top; display: inline-block; margin-left: 4px;}
+.li-review .d-tit .d-l .p-1 {font-weight: 700; font-size: 23px; padding-left: 4px;}
+.li-review .d-tit .d-l .p-1 strong {font-size: 45px; letter-spacing: -2px; line-height: 1.3;}
+.li-review .d-tit .d-l .p-3 {margin-top: 8px;}
+.li-review .d-tit .d-l .p-3 .a-btn {display: inline-block; border: 1px solid #969ca5; font-size: 13px; color: #555; border-radius: 3px; padding: 0 8px; line-height: 2; font-weight: 700; font-family: "Dotum", sans-serif;}
+.li-review .d-tit .d-r {width: 799px; border-left: 1px solid #c6c6c6; padding-left: 50px; letter-spacing: 0;}
+.li-review .d-tit .d-r .p-1 {font-size: 17px;}
+.li-review .d-tit .d-r .p-1 > span {display: inline-block; vertical-align: middle;}
+.li-review .d-tit .d-r .p-1 .i-thumb {margin-left: 4px;}
+.li-review .d-tit .d-r .p-1 .s-1 {padding: 5px 50px 5px 15px; border: 1px solid #c6c6c6; border-radius: 3px; background: #fff6f0; margin-left: 5px;}
+.li-review .d-tit .d-r .p-1 .s-1:before, .li-review .d-tit .d-r .p-1 .s-1:after {bottom: 10px}
+.li-review .d-tit .d-r .p-1 .s-1:before {border-right-color: #c6c6c6;}
+.li-review .d-tit .d-r .p-1 .s-1:after {border-right-color: #fff6f0;}
+.li-review .d-tit .d-r .p-2 {margin-top: 18px; font-size: 17px;}
+.li-review .d-tit .d-r .p-3 {font-size: 16px; border-bottom: 1px solid #999; display: inline-block; margin-top: 5px; line-height: 1.3;}
+.li-review .t-review {position: relative; width: 100%; font-size: 15px;}
+.li-review .t-review tr {border: 1px solid #c6c6c6;}
+.li-review .t-review .tr-cont {border-color: #626262;}
+.li-review .t-review th, .li-review .t-review td {text-align: center;}
+.li-review .t-review th, .li-review .t-review .tr-tit td {padding: 8px 0;}
+.li-review .t-review thead th {background: #f2f2f2; font-weight: 700;}
+.li-review .t-review .tr-tit .ta-left {text-align: left; padding-left: 50px;}
+.li-review .t-review .tr-tit.on td {background: #fff6f0;}
+.li-review .t-review .tr-tit.on .ta-left {font-weight: 700;}
+.li-review .t-review .tr-cont {display: none;}
+/*.li-review .t-review .tr-cont.on {display: table-row;}*/
+.li-review .t-review .tr-cont td {text-align: left;}
+.li-review .t-review .tr-cont td .d-txt, .li-review .t-review .tr-cont td .p-1 {padding-left: 50px;}
+.li-review .t-review .tr-cont td .d-txt {padding: 20px 40px 20px 50px; color: #282212;}
+.li-review .t-review hr {border: 0; border-top: 1px solid #e4e4e4; width: 98%; margin: 0 auto;}
+.li-review .t-review .tr-cont td .p-1 {line-height: 2.8; color: #626262; padding-top: 2px;}
+.li-review .t-review .tr-cont td .p-1 > * {vertical-align: middle; position: relative; top: -2px;}
+.li-review .t-review .tr-cont td .p-1 .reco {margin: 0 3px 0 10px;} 
+.li-review .t-review .tr-cont td .p-1 .s-num {border: 1px solid #cacaca; border-radius: 4px; padding: 2px 4px 4px;}
+.li-review .pagenation {text-align: center; font-size: 0; margin-top: 30px;}
+.li-review .pagenation a {display: inline-block; font-size: 14px; width: 32px; height: 32px; vertical-align: middle; line-height: 2.2em; border: 1px solid #ccc; color: #4c4c4c; font-family: "Nanum Gothic"; margin: 0 3px;}
+.li-review .pagenation a[class*="prev"], .li-review .pagenation a[class*="next"] {font-size: 13px; line-height: 2.3em; letter-spacing: -2px; font-weight: 700;}
+.li-review .pagenation a:hover, .li-review .pagenation a.on {border: 1px solid #ff6700; color: #fff; background: #ff6700;}
+.li-review .pagenation a.pprev, .li-review .pagenation a.nnext {background: #d3d3d3; border-color: #d3d3d3; color: #636363;}
+.li-review .pagenation a.pprev {text-indent: -3px;}
+
+/* 오시는 길 */
+.li-way {padding-top: 24px;}
+.li-way .p-1 {font-size: 17px; margin-top: 4px; letter-spacing: 0;}
+.li-way .map-box {position: relative; width: 100%; height: 584px; background: #eee; margin-top: 15px;}
+
+/* 추천 관광지 */
+.li-sights {padding-top: 6px;}
+.li-sights .s-sign {position: absolute; left: -1px; top: -1px; display: block; text-align: center; background: #5489e2; color: #fff; width: 36px; height: 27px; font-size: 11px; font-family: "Dotum", sans-serif; line-height: 32px; letter-spacing: -1px;}
+.li-sights .s-sign > span {position: relative;z-index: 1;}
+.li-sights .s-sign:before {content: ""; display: block; position: absolute; left: 0; bottom: -11px; border: 11px solid transparent; border-left: 36px solid #5489e2;}
+.li-sights .s-sign.type2 {background: #ee3b3b;}
+.li-sights .s-sign.type2:before {border-left-color: #ee3b3b;}
+.li-sights .d-item {position: relative; padding: 18px; margin-top: 14px; border: 1px solid #cbcbcb;}
+.li-sights .d-item > div {float: left; position: relative;}
+.li-sights .d-item .d-img {width: 205px; height: 126px; overflow: hidden; margin-right: 18px;}
+.li-sights .d-item .d-img > img {width: 100%; height: 100%;}
+.li-sights .d-item .d-txt {width: 838px; letter-spacing: 0;}
+.li-sights .d-item .d-txt .p-tit {font-size: 17px;}
+.li-sights .d-item .d-txt .p-cont, .li-sights .d-item .d-txt .p-bott {font-size: 15px; color: #757575;}
+.li-sights .d-item .d-txt .p-cont {margin-top: 5px; word-break: keep-all;}
+.li-sights .d-item .d-txt .p-bott {margin-top: 9px;}
+.li-sights .d-item .d-txt .p-bott .i-spot {top: -1px; margin-right: 4px;}
+.li-sights .d-item .d-txt .p-bott .mgl {background: #a1a1a1; width: 2px; height: 14px; top: -1px; margin: 0 8px;}
+.li-sights .pagenation {text-align: center; font-size: 0; margin-top: 50px;}
+.li-sights .pagenation a {display: inline-block; font-size: 14px; width: 32px; height: 32px; vertical-align: middle; line-height: 2.2em; border: 1px solid #ccc; color: #4c4c4c; font-family: "Nanum Gothic"; margin: 0 3px;}
+.li-sights .pagenation a[class*="prev"], .li-sights .pagenation a[class*="next"] {font-size: 13px; line-height: 2.3em; letter-spacing: -2px; font-weight: 700;}
+.li-sights .pagenation a:hover, .li-sights .pagenation a.on {border: 1px solid #ff6700; color: #fff; background: #ff6700;}
+.li-sights .pagenation a.pprev, .li-sights .pagenation a.nnext {background: #d3d3d3; border-color: #d3d3d3; color: #636363;}
+.li-sights .pagenation a.pprev {text-indent: -3px;}
+
+/* 상품문의 */
+.li-contact {}
+.li-contact > div[class^=d-box] {position: relative;}
+.li-contact .d-box-1 {margin-top: 30px;}
+.li-contact .d-box-1 > p {letter-spacing: 0;}
+.li-contact .d-box-1 .p-1 {font-size: 18px;}
+.li-contact .d-box-1 .p-2 {font-size: 17px; margin-top: 10px;}
+.li-contact .d-box-1 .p-2 > .thColor1 {display: block;}
+.li-contact .d-box-1 .btn-area {margin-top: -10px; text-align: right;}
+.li-contact .d-box-1 .btn-area > a {display: inline-block; font-size: 14px; padding: 4px 8px; border-radius: 3px; font-weight: 700;}
+.li-contact .d-box-1 .btn-area > .a-1 {background: #757575; border: 1px solid #5f5f5f; color: #fff;}
+.li-contact .d-box-1 .btn-area > .a-2 {
+	border: 1px solid #cdcdcd; color: #555; margin-left: 15px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,eeeeee+100 */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+}
+.li-contact .d-box-2 {font-size: 17px; background: #f0f0f0; border: 1px solid #cfcfcf; padding: 15px 30px; margin-top: 12px;}
+.li-contact .d-box-2 .inp-box {position: relative; width: 909px; height: 67px; display: inline-block; margin-right: 12px;}
+.li-contact .d-box-2 .inp-box > input {width: 100%; height: 100%; border: 1px solid #cfcfcf;}
+.li-contact .d-box-2 .inp-box .s-ph {position: absolute; top: 22px; width: 100%;  text-align: center; font-weight: 700;}
+.li-contact .d-box-2 .inp-box .s-ph .s1 {color: #1452b9;}
+.li-contact .d-box-2  > input[type=button] {
+	width: 112px; height: 67px; border: 1px solid #cdcdcd; font-size: 16px; font-weight: 700;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e4e4e4+100 */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(228,228,228,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(228,228,228,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(228,228,228,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
+}
+
+/* 1:1문의 팝업; */
+.qna-wrap {position: absolute; width: 740px; left: 50%; margin-left: -370px; top: 80px; background: #fff; border: 1px solid #c2c2c2; border-bottom: 0;}
+.qna-wrap .qna-th {position: relative; background: #ff610a; font-size: 22px; color: #fff; font-weight: 600; padding: 15px 0 15px 30px;}
+.qna-wrap .qna-th .i-x {position: absolute; right: 25px; top: 50%; margin-top: -10px;}
+.qna-wrap .btn-area {position: relative; background: #fff; margin-top: -1px; padding: 20px 0; text-align: center;}
+.qna-wrap .btn-area .btn-a {display: inline-block; font-size: 17px; color: #fff; background: #ff610a; padding: 7px 40px; border-radius: 3px; font-weight: 600;}
+
+.qna-wrap .qna_t_write {width:740px; border-top:#c8c8c8 1px solid; margin-top: -1px;}
+.qna-wrap .qna_t_write td {height:35px; padding:10px; border-bottom:#c8c8c8 1px solid; }
+.qna-wrap .qna_t_write th {height:35px; text-align:center; background-color:#f2f2f2; border-bottom:#c8c8c8 1px solid;  font-weight:600}
+.qna-wrap .qna_t_write .secret {padding-left:5px; font-size:12px; color:#ff610a}
+.qna-wrap .qna_t_write .text {width:752px; text-align:left; color:#8f8e8e; padding:20px; border:0px}
+.qna-wrap .qna_t_write .reply {background-color:#f7f7f7; width:700px; padding:20px; text-align:left; border:0px}
+.qna-wrap .qna_t_write .reply .txt {margin-left:15px; margin-top:15px}
+.qna-wrap .qna_t_write .blue_b {color:#fe5b0e; font-weight:bold; margin-right:10px; margin-bottom:10px}
+
+.qna-wrap #qna-pop-bg {display: none;}
+
+.qna-wrap .my-quest {position: relative;}
+.qna-wrap .my-quest .p0 {font-size: 16px; color: #606060; padding: 12px 0px 20px; letter-spacing: -0.5px;}
+.qna-wrap .my-quest .p0 strong {font-size: 24px; font-weight: 600;}
+.qna-wrap .my-quest .p0 em {}
+.qna-wrap .my-quest .p0 .c-1 {color: #fa6b0a;}
+.qna-wrap .my-quest {position: relative; margin:10px auto; width:740px;}
+.qna-wrap .my-quest .btn-area {position: relative; background: #fff; padding: 10px 0; text-align: right;}
+.qna-wrap .my-quest .btn-area .btn-a {display: inline-block; color: #ff610a; border: 1px solid #ff610a; padding: 6px 10px 5px; border-radius: 3px; font-size: 15px; font-weight: 600;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f4f8+100 */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(243,244,248,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,244,248,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(243,244,248,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f4f8',GradientType=0 ); /* IE6-9 */
+}
+.qna-wrap .my-quest .btn-area .btn-a .gt {position: relative; top: -1px;font-size: 13px; font-weight: 400; margin-left: 10px; color: #ff610a;}
+
+.qna-wrap .qna_t {letter-spacing:0; border-top:2px solid #ff610a; border-bottom: 1px solid #dedede;}
+.qna-wrap .qna_t th {height:45px; background:#f7f7f8; border-bottom:1px solid #dedede; font-weight:bold; text-align:center}
+.qna-wrap .qna_t td {padding:10px 0; border:1px solid #dedede}
+.qna-wrap .qna_t .question {color:#ff610a; font-weight:bold}
+.qna-wrap .qna_t .reply {background:#ffefe6; padding:20px 20px 20px 100px}
+.qna-wrap .qna_t td a:hover {color:#ff610a}
+.qna-wrap .qna_t .b_r_no {border-right:none}
+.qna-wrap .qna_t .tit {padding-left:10px}
+.qna-wrap .qna_t .day {font-size:11px; border-right:none}
+.qna-wrap .qna_t .num {font-size:11px; border-left:none}
+
+
 /* 주변 다른 숙소 */
-.sec-prd-around {padding: 30px 0; background: #f1f2f7;}
+.sec-prd-around {margin-top: 100px; padding: 30px 0; background: #f1f2f7;}
 .prd-around {position: relative; width: 1010px; margin: 0 auto; letter-spacing: 0;}
 .prd-around .li-item {position: relative; float: left; width: 238px; margin-left: 19px;}
 .prd-around .li-item:first-child {margin-left: 0;}
