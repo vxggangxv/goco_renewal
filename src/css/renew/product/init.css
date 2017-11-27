@@ -135,7 +135,7 @@
 .lowestPric_pop .lowestPric_area .price_mid .list_guide > li .list_guide_inner > ul > li > ul {padding-left:10px;}
 .lowestPric_pop .lowestPric_area .price_mid .list_guide > li .list_guide_inner > ul > li > ul .sign {background-color:#ffdd00;}
 .lowestPric_pop .lowestPric_area .price_mid .btn_decl {text-align:center; margin-top:20px;}
-.lowestPric_pop .lowestPric_area .price_mid .btn_decl a {display:inline-block; width:194px; height:42px; line-height:42px; font-size:18px; color:#fff !important; background-color:#000;}
+.lowestPric_pop .lowestPric_area .price_mid .btn_decl a {display:inline-block; width:194px; height:42px; line-height:42px; font-size:18px; color:#fff !important; background-color:#000; cursor: pointer;}
 
 .sec-prd-list {}
 .sec-prd-list [class*=tr] {font-size: 0;}
@@ -410,9 +410,9 @@
 .area-prd-detail .ul-contents .li-intro .d-txt .fold-txt {display: none;}
 .area-prd-detail .ul-contents .li-intro .d-txt .a-btn {position: relative; display: inline-block; color: #59a2ec; border: 1px solid #5ca3ec; line-height: 1.5; font-size: 13px; padding: 0 5px;}
 .area-prd-detail .ul-contents .li-intro .d-txt .a-btn:before {content: "▼"; position: relative; top: -1px; font-size: 11px; margin-right: 3px;}
-.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict {position: relative;}
-.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li {float: left; text-align: center; margin-left: 10px;}
-.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li:first-child {margin-left: -14px;}
+.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict {position: relative; margin: -10px 0 -8px -14px;}
+.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li {float: left; text-align: center; margin-left: 10px; height: 114px;}
+.area-prd-detail .ul-contents .li-intro .d-txt .facil-pict > li .pictImg {margin-top: 5px;}
 
 /* 이용후기 */
 .li-review {margin-top: 25px;}
@@ -503,7 +503,7 @@
 .li-contact .d-box-1 .btn-area > a {display: inline-block; font-size: 14px; padding: 4px 8px; border-radius: 3px; font-weight: 700;}
 .li-contact .d-box-1 .btn-area > .a-1 {background: #757575; border: 1px solid #5f5f5f; color: #fff;}
 .li-contact .d-box-1 .btn-area > .a-2 {
-	border: 1px solid #cdcdcd; color: #555; margin-left: 15px;
+	border: 1px solid #cdcdcd; color: #555; margin-left: 14px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,eeeeee+100 */
 	background: rgb(255,255,255); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6-15 */
@@ -513,7 +513,7 @@
 }
 .li-contact .d-box-2 {font-size: 17px; background: #f0f0f0; border: 1px solid #cfcfcf; padding: 15px 30px; margin-top: 12px;}
 .li-contact .d-box-2 .inp-box {position: relative; width: 909px; height: 67px; display: inline-block; margin-right: 12px;}
-.li-contact .d-box-2 .inp-box > input {width: 100%; height: 100%; border: 1px solid #cfcfcf;}
+.li-contact .d-box-2 .inp-box .write-area {width: 100%; height: 100%; border: 1px solid #cfcfcf; padding: 5px; resize: none;}
 .li-contact .d-box-2 .inp-box .s-ph {position: absolute; top: 22px; width: 100%;  text-align: center; font-weight: 700;}
 .li-contact .d-box-2 .inp-box .s-ph .s1 {color: #1452b9;}
 .li-contact .d-box-2  > input[type=button] {
@@ -527,31 +527,15 @@
 }
 
 /* 1:1문의 팝업; */
+#qna-pop-bg {display: none;}
 .qna-wrap {position: absolute; width: 740px; left: 50%; margin-left: -370px; top: 80px; background: #fff; border: 1px solid #c2c2c2; border-bottom: 0;}
+.qna-wrap, .qna-wrap * {box-sizing: content-box;}
 .qna-wrap .qna-th {position: relative; background: #ff610a; font-size: 22px; color: #fff; font-weight: 600; padding: 15px 0 15px 30px;}
-.qna-wrap .qna-th .i-x {position: absolute; right: 25px; top: 50%; margin-top: -10px;}
+.qna-wrap .qna-th .i-x {position: absolute; right: 25px; top: 13px;}
 .qna-wrap .btn-area {position: relative; background: #fff; margin-top: -1px; padding: 20px 0; text-align: center;}
-.qna-wrap .btn-area .btn-a {display: inline-block; font-size: 17px; color: #fff; background: #ff610a; padding: 7px 40px; border-radius: 3px; font-weight: 600;}
-
-.qna-wrap .qna_t_write {width:740px; border-top:#c8c8c8 1px solid; margin-top: -1px;}
-.qna-wrap .qna_t_write td {height:35px; padding:10px; border-bottom:#c8c8c8 1px solid; }
-.qna-wrap .qna_t_write th {height:35px; text-align:center; background-color:#f2f2f2; border-bottom:#c8c8c8 1px solid;  font-weight:600}
-.qna-wrap .qna_t_write .secret {padding-left:5px; font-size:12px; color:#ff610a}
-.qna-wrap .qna_t_write .text {width:752px; text-align:left; color:#8f8e8e; padding:20px; border:0px}
-.qna-wrap .qna_t_write .reply {background-color:#f7f7f7; width:700px; padding:20px; text-align:left; border:0px}
-.qna-wrap .qna_t_write .reply .txt {margin-left:15px; margin-top:15px}
-.qna-wrap .qna_t_write .blue_b {color:#fe5b0e; font-weight:bold; margin-right:10px; margin-bottom:10px}
-
-.qna-wrap #qna-pop-bg {display: none;}
-
-.qna-wrap .my-quest {position: relative;}
-.qna-wrap .my-quest .p0 {font-size: 16px; color: #606060; padding: 12px 0px 20px; letter-spacing: -0.5px;}
-.qna-wrap .my-quest .p0 strong {font-size: 24px; font-weight: 600;}
-.qna-wrap .my-quest .p0 em {}
-.qna-wrap .my-quest .p0 .c-1 {color: #fa6b0a;}
-.qna-wrap .my-quest {position: relative; margin:10px auto; width:740px;}
-.qna-wrap .my-quest .btn-area {position: relative; background: #fff; padding: 10px 0; text-align: right;}
-.qna-wrap .my-quest .btn-area .btn-a {display: inline-block; color: #ff610a; border: 1px solid #ff610a; padding: 6px 10px 5px; border-radius: 3px; font-size: 15px; font-weight: 600;
+.qna-wrap .btn-area .btn-a {display: inline-block; font-size: 16px; color: #fff; background: #ff610a; padding: 7px 40px; border-radius: 2px; font-weight: 600; border: 1px solid #ff610a;}
+.qna-wrap .btn-area .btn-a.cancle {
+	border: 1px solid #d5d5d5; color: #585858; margin-left: 30px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f4f8+100 */
 	background: rgb(255,255,255); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(243,244,248,1) 100%); /* FF3.6-15 */
@@ -559,18 +543,59 @@
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(243,244,248,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f4f8',GradientType=0 ); /* IE6-9 */
 }
-.qna-wrap .my-quest .btn-area .btn-a .gt {position: relative; top: -1px;font-size: 13px; font-weight: 400; margin-left: 10px; color: #ff610a;}
 
-.qna-wrap .qna_t {letter-spacing:0; border-top:2px solid #ff610a; border-bottom: 1px solid #dedede;}
-.qna-wrap .qna_t th {height:45px; background:#f7f7f8; border-bottom:1px solid #dedede; font-weight:bold; text-align:center}
-.qna-wrap .qna_t td {padding:10px 0; border:1px solid #dedede}
-.qna-wrap .qna_t .question {color:#ff610a; font-weight:bold}
-.qna-wrap .qna_t .reply {background:#ffefe6; padding:20px 20px 20px 100px}
-.qna-wrap .qna_t td a:hover {color:#ff610a}
-.qna-wrap .qna_t .b_r_no {border-right:none}
-.qna-wrap .qna_t .tit {padding-left:10px}
-.qna-wrap .qna_t .day {font-size:11px; border-right:none}
-.qna-wrap .qna_t .num {font-size:11px; border-left:none}
+.qna-wrap .qna_t_write {width:740px; border-top:#c8c8c8 1px solid; margin-top: -1px;}
+.qna-wrap .qna_t_write th, .qna-wrap .qna_t_write td {height: 25px; border-bottom:#c8c8c8 1px solid; vertical-align: middle;}
+.qna-wrap .qna_t_write th {text-align:center; background-color:#f2f2f2; font-weight:600}
+.qna-wrap .qna_t_write td {padding:10px; font-size: 14px;}
+.qna-wrap .qna_t_write td label, .qna-wrap .qna_t_write td input {cursor: pointer;}
+.qna-wrap .qna_t_write td input {height: 24px;}
+.qna-wrap .qna_t_write .secret {padding-left:5px; font-size:12px; color:#ff610a}
+.qna-wrap .qna_t_write .text {width:752px; text-align:left; color:#8f8e8e; padding:20px; border:0px}
+.qna-wrap .qna_t_write .reply {background-color:#f7f7f7; width:700px; padding:20px; text-align:left; border:0px}
+.qna-wrap .qna_t_write .reply .txt {margin-left:15px; margin-top:15px}
+.qna-wrap .qna_t_write .blue_b {color:#fe5b0e; font-weight:bold; margin-right:10px; margin-bottom:10px}
+.qna_t_write .qna_title_search_list {position: relative;}
+.qna_t_write .select02 {padding-left: 5px;}
+.qna_t_write .qna_title_search_list .select02 {width:98%}
+.qna_t_write .qna_title_search_list .q_list_box {position: absolute; left: 0; top: 27px; padding: 10px; border: 1px solid #f37720; background-color: #fff; width: 595px; z-index: 999; height: 500px; overflow-y: auto; display: none;}
+.qna_t_write .qna_title_search_list .q_list_box .i-x {position:absolute;top:10px;right:12px;}
+.qna_t_write .qna_title_search_list .q_list_box ul > li {line-height: 1.6; letter-spacing: 0px; cursor: pointer;}
+.qna_t_write .select03 {margin:10px 0 0; padding:10px; width:592px; height:300px; line-height:2; text-align:left; resize: none;}
+
+/* 자주묻는질문 */
+.li-faq {width:100%; text-align:left}
+.li-faq .p-row {font-size: 17px; margin-top: 26px; letter-spacing: 0;}
+.li-faq .p-row .f-bd {font-size: 18px; display: block; margin-bottom: 6px;}
+.li-faq .q-tab {position: relative; width: 100%; margin: 15px auto 2px; border-bottom: 2px solid #ff610a;}
+.li-faq .q-tab > li {float: left; width: 20%; text-align: center; border: 1px solid #d3d3d5; border-left: 0; box-sizing: border-box;}
+.li-faq .q-tab > li:first-child {border-left: 1px solid #d3d3d5;}
+.li-faq .q-tab > li > a {display: block; width: 100%; line-height: 40px; font-size: 15px; color: #6e6e6e;}
+.li-faq .q-tab > li.on {border-top-color: #f37720;}
+.li-faq .q-tab > li.on > a {color: #fff; background: #f37720;}
+
+
+.li-faq .title {float:left; width:800px; height:44px; border-bottom:2px solid #c8c8c8; margin-bottom:10px}
+.li-faq .blue {color:#fe5b0e; font-weight:bold}
+.li-faq .faq_t {position: relative; width:100%; letter-spacing:0; border-top:1px solid #c0c0c0;}
+.li-faq .faq_t th {height:45px; background:#f7f7f8; border-bottom:1px solid #dedede; font-weight:bold; text-align:center; vertical-align: middle;}
+.li-faq .faq_t td {padding:10px 0; border-bottom:1px solid #dedede; text-align: center;}
+.li-faq .faq_t .best {background:#fff3ec; font-weight:700;}
+.li-faq .faq_t .tit {text-align: left;}
+.li-faq .faq_t .question {color:#ff610a; font-weight:bold}
+.li-faq .faq_t td a:hover {color:#ff610a}
+
+.li-faq .faq_t tr[id^=faq_cont] {display: none;}
+.li-faq .faq_t .reply {text-align: left; position: relative; background: #F6F4F5; padding: 30px 20px 20px 40px;}
+.li-faq .faq_t .reply > p {line-height: 1.4;}
+.li-faq .faq_t .faq_more {margin-left: 0; width: 100%; margin-top: 30px;}
+.li-faq .faq_t .faq_more h4 {margin-bottom: 5px; font-weight: 700; color: #ff610a; font-size: 17px;}
+.li-faq .faq_t .faq_more p {position: relative; width: 100%; margin-top: 15px;}
+.li-faq .faq_t .faq_more p a {display: inline-block; font-size: 15px; font-weight: 600; height: 34px; line-height: 32px; padding: 0 10px; box-sizing: border-box; border-radius: 3px;}
+.li-faq .faq_t .faq_more p .btn-q {background: #f37720; color: #fff; border: 1px solid #f37720;}
+.li-faq .faq_t .faq_more p .btn-q .gt {position: relative; top: -1px;font-size: 13px; font-weight: 400; margin-left: 8px;}
+.li-faq .faq_t .faq_more p .btn-x {position: absolute; right: 0; top: 0; width: 90px; text-align: center; border: 1px solid #838383; color: #737373;}
+
 
 
 /* 주변 다른 숙소 */
