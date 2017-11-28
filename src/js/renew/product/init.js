@@ -79,7 +79,7 @@ $(function() {
 	// STEP2 패키지 선택 높이 조절
 	$.each($("#prd-tb .trd-comp-1"), function() {
 		var c1_ht = $("#prd-tb .trd-comp-1").height();
-			$("#prd-tb .trd-comp-2").css({
+			$("#prd-tb .trd-comp-1").siblings().css({
 			"min-height": c1_ht
 		});
 	});
@@ -99,7 +99,7 @@ $(function() {
 		target.siblings().find('.tr-detail').removeClass('on');
 		target.find('.tr-detail').toggleClass('on');
 		var c1_ht = $(this).closest('.d-item').find('.tr-detail').find('.trd-comp-1').height();
-		target.find('.tr-detail').find('.trd-comp-1').next().css({
+		target.find('.tr-detail').find('.trd-comp-1').siblings().css({
 			"min-height": c1_ht
 		});
 		
