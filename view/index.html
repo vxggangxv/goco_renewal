@@ -17,8 +17,8 @@
 	<link rel="stylesheet" href="../src/css/totalweb.css">-->
 	
 	<!--폰트가지고 오기-->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+	<!--<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">-->
 	
 	<!--리뉴얼 메인페이지 Css-->
 	<link rel="stylesheet" href="http://static.go.co.kr/css/jquery.bxslider.css">
@@ -26,11 +26,22 @@
 	<link rel="stylesheet" href="../src/css/renew/init.css">
 	
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<!--<script src="http://static.go.co.kr/js/renew/libs/prefixfree.min.js"></script>-->
+	<!--<script src="../src/js/renew/libs/prefixfree.min.js"></script>-->
 	<!--리뉴얼 메인페이지 Js-->
 	<script src="http://static.go.co.kr/js/jquery.bxslider.min.js"></script>
 	<script src="../src/js/renew/common.js"></script>
 	<script src="../src/js/renew/init.js"></script>
+
+	<script>
+		WebFont.load({
+			custom: {
+				families: ['Nanum Gothic', 'Noto Sans KR'],
+				urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css','http://fonts.googleapis.com/earlyaccess/notosanskr.css']
+			}
+		});
+	</script>
 
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
